@@ -1,24 +1,71 @@
-# standard jekyll configuration options
+title:            Deep Into Bruce Inside
+description:      stuffs about Java and Linux 
+# Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              http://bruceinside.github.io
 
-exclude: ['Rakefile', 'README.md', 'config.rb']
+# Owner/author information
+owner:
+  name:           Bruce Auyeung
+  avatar:         bio-photo.jpg
+  bio:            "Borned, Alive, Suffering"
+  email:          bruce.oy@gmail.com
+  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         redhatlinux10
+  stackoverflow: 
+  linkedin:       
+  instagram:      
+  lastfm:         
+  tumblr: 
+  pinterest: 
+  foursquare: 
+  steam: 
+  dribbble: 
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
 
-# configuration required for some pages
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-49021671-1
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:        
 
-domain: bruceinside.github.io
-title: Deep Into Bruce Inside
-author: Bruce
-email: bruce.oy@gmail.com
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about/
+  - title: Posts
+    url: /posts/
+  - title: Theme Setup
+    url: /theme-setup/
+  - title: Made Mistakes
+    url: http://mademistakes.com
+    external: true
 
-# configuration for ehancements, uncomment to enable
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Shanghai
+future:      true
+pygments:    true
+markdown:    kramdown
 
-# feedburner:
-#   id: feedburnerid
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
 
-google_analytics:
-    account: UA-49021671-1
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
-github:
-    username: redhatlinux10
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 
-disqus:
-    id: bruceinside
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

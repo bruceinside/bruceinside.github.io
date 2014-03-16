@@ -1,0 +1,24 @@
+# standard jekyll configuration options
+
+exclude: ['Rakefile', 'README.md', 'config.rb']
+
+# configuration required for some pages
+
+domain: bruceinside.github.io
+title: Deep Into Bruce Inside
+author: Bruce
+email: bruce.oy@gmail.com
+
+# configuration for ehancements, uncomment to enable
+
+# feedburner:
+#   id: feedburnerid
+
+google_analytics:
+    account: UA-49021671-1
+
+github:
+    username: redhatlinux10
+
+disqus:
+    id: bruceinside
