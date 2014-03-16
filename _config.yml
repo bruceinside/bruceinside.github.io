@@ -30,9 +30,6 @@ google_analytics:   UA-49021671-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        
-
-disqus:
-    id: bruceinside
     
 # Links to include in top navigation
 # For external links add external: true
