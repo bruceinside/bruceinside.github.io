@@ -1,5 +1,5 @@
 # baseurl:          "/"
-title:            openSUSE links us
+title:            openSUSE LINKS US
 description:      stuffs about openSUSE and Java 
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://suselinks.us
@@ -30,7 +30,10 @@ owner:
 google_analytics:   UA-49021671-2
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
+bing_verify:    
+
+uyan:
+  uid: 1531172
     
 # Links to include in top navigation
 # For external links add external: true
