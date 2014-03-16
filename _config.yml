@@ -1,3 +1,4 @@
+baseurl:          "/"
 title:            Deep Into Bruce Inside
 description:      stuffs about Java and Linux 
 # Your site's domain goes here. Leave localhost server or blank when working locally.
