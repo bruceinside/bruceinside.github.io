@@ -1,5 +1,5 @@
 # baseurl:          "/"
-title:            openSUSE LINKS US
+title:            牛牛博客
 description:      stuffs about openSUSE and Java 
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://suselinks.us
@@ -49,7 +49,7 @@ links:
     url: /atom.xml    
   ## - title: Theme Setup
   ##   url: /theme-setup/
-  - title: 牛牛博客
+  - title: 旧站入口
     url: http://bruceinside.duapp.com
     external: true
 
