@@ -1,0 +1,85 @@
+---
+layout: post
+title: 在 openSUSE 上安装 Oracle JDK 8 详解
+description: "在 openSUSE 上安装 Oracle JDK 8，可以和 openJDK 共存"
+tags: [Java, openSUSE]
+---
+
+正与大家都知道的那样，SUSE决定从openSUSE 12.1开始移除 Oracle Java。这是由于Oracle 移除了 Java 的操作系统发行商授权导致的，而这早在 Oracle 收购 Sun 公司时我们就已经预见到了。 所以，如果你依旧需要 Oracle JDK，这篇文章将指导你如何安装它。 以安装64位 JDK 为例，步骤如下：</p>
+<ol>
+<li>
+<h5>下载RPM软件包</h5>
+点击<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" title="javase jdk 下载链接">Oracle Java 下载页面</a>，根据自己操作系统的位数选择对应的RPM包。我下载的是jdk-8-linux-x64.rpm</li>
+<li>
+<h5>安装JDK</h5>
+可以直接在dolphin中&ldquo;右键单击RPM包-&gt;打开方式-&gt;安装/删除软件&rdquo;进行安装，也可以执行下述命令安装：
+{% highlight bash %}
+sudo zypper in jdk-8-linux-x64.rpm
+{% endhighlight %}
+</li>
+<li>
+<h5>安装alternatives</h5>
+安装了java alternative 和javaplugin alternative后，你就可以很方便的在缺省java版本（Iced Tea）和Oracle Java之间切换
+{% highlight bash %}
+sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/jdk1.8.0/bin/java" 40
+sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplugin.so" "javaplugin" "/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so" 40
+{% endhighlight %}
+
+注1：update-alternatives --install对照详解表
+<table>
+<thead>
+<tr><th>参数</th><th>示例值</th><th>备注</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>link（第1个参数）</td>
+<td>/usr/bin/java</td>
+<td>符号链接文件路径</td>
+</tr>
+<tr>
+<td>name（第2个参数）</td>
+<td>java</td>
+<td>alternative名称</td>
+</tr>
+<tr>
+<td>path（第3个参数）</td>
+<td>/usr/java/jdk1.8.0/bin/java</td>
+<td>符号链接指向的实际文件路径</td>
+</tr>
+<tr>
+<td>priority（第4个参数）</td>
+<td>40</td>
+<td>优先级，用于自动模式中</td>
+</tr>
+</tbody>
+</table>
+注2：如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
+<pre class="brush: bash">rpm -ql jdk|grep /bin/java
+rpm -ql jdk|grep libnpjp2.so
+  </pre>
+</li>
+<li>
+<h5>配置alternatives</h5>
+首先配置java的，执行下述命令：
+{% highlight bash %}
+sudo /usr/sbin/update-alternatives --config java
+{% endhighlight %}
+选择和/usr/java/jdk1.8.0/bin/java对应的数字，我这里是1。 接着配置java浏览器插件的，执行下述命令：
+{% highlight bash %}
+sudo /usr/sbin/update-alternatives --config javaplugin
+{% endhighlight %}
+选择和/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so对应的数字，我这里是1。</li>
+<li>
+<h5>验证是否安装成功</h5>
+<ol>
+<li>先验证java。
+{% highlight bash %}
+java -version
+{% endhighlight %}
+如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。</li>
+<li>再验证Java plugin。打开浏览器，在地址栏输入about:plugins，你可以看到和下面类似的内容： <a href="http://i.imgur.com/v5vlp.png"><img title="google chrome java plugin snapshot" src="http://i.imgur.com/v5vlp.png" alt="google chrome java plugin snapshot" /></a>
+<p>然后访问<a href="http://www.w3.org/People/mimasa/test/object/java/Othello">www.w3.org网站上的Java Applet测试页面</a>，如果能出现Othello的游戏画面，说明你的java plugin也安装成功了。</p>
+<p>注3：在google chrome 22, firefox 16 上验证成功。</p>
+</li>
+</ol></li>
+</ol>
