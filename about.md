@@ -12,6 +12,7 @@ image:
 ---
 
 我是什么样的一个人呢？
+
 - 从事软件开发行业十余载了，从事过网络管理、嵌入式C开发、Java网络开发。
 - 现今在 [ZTE中兴](http://www.zte.com.cn/cn/) 工作，任职开发经理、科长。
 - 业务时间就鼓捣 linux，从2003年开始喜欢上它，使用过 redhat linux 9, Fedora, Ubuntu, 现在敲定 openSUSE 为家用系统了，家里电脑上就只有 openSUSE 系统，够极客范没？
