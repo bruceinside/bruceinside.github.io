@@ -34,7 +34,7 @@ google_analytics:   UA-49021671-2
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:    
-
+baidu_tongji:       6e63f9f606e6a9fdffd7adb9d700035a
 jiathis:
   uid: 1531172
     
