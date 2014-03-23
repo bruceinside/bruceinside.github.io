@@ -21,7 +21,7 @@ sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/j
 sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplugin.so" "javaplugin" "/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so" 40
 {% endhighlight %}
 
-注1:`update-alternatives --install`对照详解表
+**注1**:`update-alternatives --install`对照详解表
 
 | 参数  | 示例值  | 备注
 | ----- | ----- | ----
@@ -30,7 +30,7 @@ sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplu
 | path（第3个参数） | /usr/java/jdk1.8.0/bin/java | 符号链接指向的实际文件路径
 | priority（第4个参数） | 40 | 优先级，用于自动模式中
 
-注2：如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
+**注2**：如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
 {% highlight bash %}
 rpm -ql jdk|grep /bin/java
 rpm -ql jdk|grep libnpjp2.so
