@@ -45,6 +45,8 @@ links:
     url: /about/
   - title: 文章
     url: /posts/
+  - title: 订阅本站
+    url: /atom.xml    
   ## - title: Theme Setup
   ##   url: /theme-setup/
   - title: 牛牛博客
