@@ -21,8 +21,8 @@ sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/j
 sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplugin.so" "javaplugin" "/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so" 40
 {% endhighlight %}
 
-**注1**:
-`update-alternatives --install`对照详解表
+注1:`update-alternatives --install`对照详解表
+
 | 参数  | 示例值  | 备注
 | ----- | ----- | ----
 | link（第1个参数） | /usr/bin/java | 符号链接文件路径
@@ -30,8 +30,7 @@ sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplu
 | path（第3个参数） | /usr/java/jdk1.8.0/bin/java | 符号链接指向的实际文件路径
 | priority（第4个参数） | 40 | 优先级，用于自动模式中
 
-**注2**：
-如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
+注2：如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
 {% highlight bash %}
 rpm -ql jdk|grep /bin/java
 rpm -ql jdk|grep libnpjp2.so
@@ -48,16 +47,14 @@ sudo /usr/sbin/update-alternatives --config javaplugin
 选择和 `/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so` 对应的数字，我这里是1
 
 - #####验证是否安装成功,先验证java。
-
 {% highlight bash %}
 java -version
 {% endhighlight %}
 如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。
 
 - #####再验证Java plugin。
-
 打开浏览器，在地址栏输入 `about:plugins`，你可以看到和下面类似的内容：
-![java plugin snapshot](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE2_zpsc47a3a87.png)
+![](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE2_zpsc47a3a87.png)
 
 默认情况下，Java 8 只允许运行使用了来自可信颁发机构的证书标识的Java应用程序，所以要正常运行下一步的 Java Applet，需要修改下Java的安全级别。运行下述命令:
 {% highlight bash %}
