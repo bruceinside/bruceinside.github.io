@@ -14,14 +14,12 @@ tags: [Java, openSUSE]
 {% highlight bash %}
 sudo zypper in jdk-8-linux-x64.rpm
 {% endhighlight %}
-
 1. #####安装alternatives
 安装了java alternative 和javaplugin alternative后，你就可以很方便的在缺省java版本（Iced Tea）和Oracle Java之间切换
 {% highlight bash %}
 sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/jdk1.8.0/bin/java" 40
 sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplugin.so" "javaplugin" "/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so" 40
 {% endhighlight %}
-
 **注1**:
 update-alternatives --install对照详解表
 参数|示例值|备注
@@ -30,14 +28,12 @@ link（第1个参数）|/usr/bin/java|符号链接文件路径
 name（第2个参数）|java|alternative名称
 path（第3个参数）|/usr/java/jdk1.8.0/bin/java|符号链接指向的实际文件路径
 priority（第4个参数）|40|优先级，用于自动模式中
-
 **注2**：
 如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
 {% highlight bash %}
 rpm -ql jdk|grep /bin/java
 rpm -ql jdk|grep libnpjp2.so
 {% endhighlight %}
-
 1. #####配置alternatives
 首先配置java的，执行下述命令：
 {% highlight bash %}
@@ -48,13 +44,12 @@ sudo /usr/sbin/update-alternatives --config java
 sudo /usr/sbin/update-alternatives --config javaplugin
 {% endhighlight %}
 选择和/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so对应的数字，我这里是1。
-
 1. #####验证是否安装成功
-   * 先验证java。
-{% highlight bash %}
-java -version
-{% endhighlight %}
-如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。
+* 先验证java。
+  {% highlight bash %}
+  java -version
+  {% endhighlight %}
+  如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。
    * 再验证Java plugin。
 打开浏览器，在地址栏输入 `about:plugins`，你可以看到和下面类似的内容：
 ![java plugin snapshot](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE2_zpsc47a3a87.png)
