@@ -10,8 +10,7 @@ tags: [Java, openSUSE]
 1. #####下载RPM软件包
 点击 [Oracle Java 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，根据自己操作系统的位数选择对应的RPM包。我下载的是jdk-8-linux-x64.rpm
 1. #####安装JDK
-可以直接在dolphin中&ldquo;右键单击RPM包-&gt;打开方式-&gt;安装/删除软件&rdquo;进行安装，也可以执行下述命令安装：
-{% highlight bash %}
+可以直接在dolphin中&ldquo;右键单击RPM包-&gt;打开方式-&gt;安装/删除软件&rdquo;进行安装，也可以执行下述命令安装：{% highlight bash %}
 sudo zypper in jdk-8-linux-x64.rpm
 {% endhighlight %}
 1. #####安装alternatives
@@ -29,18 +28,15 @@ name（第2个参数）|java|alternative名称
 path（第3个参数）|/usr/java/jdk1.8.0/bin/java|符号链接指向的实际文件路径
 priority（第4个参数）|40|优先级，用于自动模式中
 **注2**：
-如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
-{% highlight bash %}
+如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：{% highlight bash %}
 rpm -ql jdk|grep /bin/java
 rpm -ql jdk|grep libnpjp2.so
 {% endhighlight %}
 1. #####配置alternatives
-首先配置java的，执行下述命令：
-{% highlight bash %}
+首先配置java的，执行下述命令：{% highlight bash %}
 sudo /usr/sbin/update-alternatives --config java
 {% endhighlight %}
-选择和/usr/java/jdk1.8.0/bin/java对应的数字，我这里是1。 接着配置java浏览器插件的，执行下述命令：
-{% highlight bash %}
+选择和/usr/java/jdk1.8.0/bin/java对应的数字，我这里是1。 接着配置java浏览器插件的，执行下述命令：{% highlight bash %}
 sudo /usr/sbin/update-alternatives --config javaplugin
 {% endhighlight %}
 选择和/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so对应的数字，我这里是1。
