@@ -20,10 +20,10 @@ sudo zypper in jdk-8-linux-x64.rpm
 <li>
 <h5>安装alternatives</h5>
 安装了java alternative 和javaplugin alternative后，你就可以很方便的在缺省java版本（Iced Tea）和Oracle Java之间切换
-{% highlight bash %}
-sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/jdk1.8.0/bin/java" 40<br/>
+<pre>
+sudo /usr/sbin/update-alternatives --install "/usr/bin/java" "java" "/usr/java/jdk1.8.0/bin/java" 40
 sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplugin.so" "javaplugin" "/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so" 40
-{% endhighlight %}
+</pre>
 
 注1：update-alternatives --install对照详解表
 <table>
@@ -54,10 +54,10 @@ sudo /usr/sbin/update-alternatives --install "/usr/lib64/browser-plugins/javaplu
 </tbody>
 </table>
 注2：如果你安装的jdk版本和我的不同(一般就是小版本号不同，比如_09)，请酌情替换上述命令中的path（第3个参数）的值。可以通过下面的命令来获取对应的值：
-{% highlight bash %}
+<pre>
 rpm -ql jdk|grep /bin/java
 rpm -ql jdk|grep libnpjp2.so
-{% endhighlight %}
+</pre>
 </li>
 <li>
 <h5>配置alternatives</h5>
