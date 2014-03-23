@@ -40,7 +40,7 @@ rpm -ql jdk|grep libnpjp2.so
 {% highlight bash %}
 sudo /usr/sbin/update-alternatives --config java
 {% endhighlight %}
-选择和/usr/java/jdk1.8.0/bin/java对应的数字，我这里是1。 接着配置java浏览器插件的，执行下述命令：
+选择和`/usr/java/jdk1.8.0/bin/java`对应的数字，我这里是1。 接着配置java浏览器插件的，执行下述命令：
 {% highlight bash %}
 sudo /usr/sbin/update-alternatives --config javaplugin
 {% endhighlight %}
