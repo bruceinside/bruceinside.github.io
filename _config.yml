@@ -41,12 +41,12 @@ jiathis:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
+  - title: 关于我
     url: /about/
-  - title: Posts
+  - title: 文章
     url: /posts/
-  - title: Theme Setup
-    url: /theme-setup/
+  ## - title: Theme Setup
+  ##   url: /theme-setup/
   - title: 牛牛博客
     url: http://bruceinside.duapp.com
     external: true
