@@ -48,11 +48,14 @@ sudo /usr/sbin/update-alternatives --config javaplugin
 选择和 `/usr/java/jdk1.8.0/jre/lib/amd64/libnpjp2.so` 对应的数字，我这里是1
 
 - #####验证是否安装成功,先验证java。
-  {% highlight bash %}
-  java -version
-  {% endhighlight %}
-  如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。
+
+{% highlight bash %}
+java -version
+{% endhighlight %}
+如果该命令的输出信息中应该包含"1.8.0"和&ldquo;HotSpot&rdquo;字样，则说明Oracle JDK8 安装成功了。
+
 - #####再验证Java plugin。
+
 打开浏览器，在地址栏输入 `about:plugins`，你可以看到和下面类似的内容：
 ![java plugin snapshot](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE2_zpsc47a3a87.png)
 
@@ -64,6 +67,6 @@ sudo /usr/sbin/update-alternatives --config javaplugin
 然后在安全页签调整安全级别为中（默认值是高），如下图所示：
 ![](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE3_zpsa57ab78d.png)
 
-然后访问![www.w3.org网站上的Java Applet测试页面](http://www.w3.org/People/mimasa/test/object/java/Othello)，如果能出现Othello的游戏画面，说明你的java plugin也安装成功了。
+然后访问[www.w3.org网站上的Java Applet测试页面](http://www.w3.org/People/mimasa/test/object/java/Othello)，如果能出现Othello的游戏画面，说明你的java plugin也安装成功了。
 
 **注3**：在google chrome 33, firefox 27 上验证成功。
