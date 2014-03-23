@@ -1,29 +1,18 @@
 ---
 layout: page
 permalink: /about/
-title: About the Theme
+title: 博主简介
 tagline: Minimal Mistakes, a Jekyll Theme
-tags: [about, Jekyll, theme, responsive]
-modified: 9-9-2013
+tags: [ZTE, 中兴, Bruce Auyeung, openSUSE, Java, bruce.oy@gmail.com]
+modified: 3-23-2014
 image:
   feature: texture-feature-02.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my site](http://mademistakes.com)[^1] as a theme for others to hack and build on would be fun. So here be that theme --- I call it **Minimal Mistakes**, a responsive Jekyll theme with large featured images and solid typography. 
-
-## Minimal Mistakes is all about:
-
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments --- content first.
-* Large feature images for posts and pages.
-* Author sidebar to pimp your bio, photo[^2], and social media links.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
-
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
-
-[^1]: Since open sourcing this theme I have released a couple other Jekyll themes. My website [Made Mistakes](http://mademistakes.com) is currently using a modified version of my [So Simple Theme](http://mmistakes.github.io/so-simple-theme/).
-
-[^2]: Fancy avatars provided by [Brandon Mathis](http://brandonmathis.com/projects/fancy-avatars/demo/) under a [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/).
+我是什么样的一个人呢？
+- 从事软件开发行业十余载了，从事过网络管理、嵌入式C开发、Java网络开发。
+- 现今在 [ZTE中兴](http://www.zte.com.cn/cn/) 工作，任职开发经理、科长。
+- 业务时间就鼓捣 linux，从2003年开始喜欢上它，使用过 redhat linux 9, Fedora, Ubuntu, 现在敲定 openSUSE 为家用系统了，家里电脑上就只有 openSUSE 系统，够极客范没？
+- 热爱开源，受益于开源，尽力为开源做点贡献。
