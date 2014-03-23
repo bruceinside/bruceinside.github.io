@@ -54,7 +54,7 @@ java -version
 
 - #####再验证Java plugin。
 打开浏览器，在地址栏输入 `about:plugins`，你可以看到和下面类似的内容：
-![](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE2_zpsc47a3a87.png)
+![](http://suselinks-us.qiniudn.com/java-plugin-snapshot.png)
 
 默认情况下，Java 8 只允许运行使用了来自可信颁发机构的证书标识的Java应用程序，所以要正常运行下一步的 Java Applet，需要修改下Java的安全级别。运行下述命令:
 {% highlight bash %}
@@ -62,7 +62,7 @@ java -version
 {% endhighlight %}
 
 然后在安全页签调整安全级别为中（默认值是高），如下图所示：
-![](http://i1317.photobucket.com/albums/t638/redhatlinux10/suselinks_us/629356FE3_zpsa57ab78d.png)
+![](http://suselinks-us.qiniudn.com/tune-java-security-level.png)
 
 然后访问[www.w3.org网站上的Java Applet测试页面](http://www.w3.org/People/mimasa/test/object/java/Othello)，如果能出现Othello的游戏画面，说明你的java plugin也安装成功了。
 
