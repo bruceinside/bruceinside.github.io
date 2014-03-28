@@ -20,13 +20,13 @@ linux 系统中的支付宝安全控件，只适用于firefox，chrome，opera�
 
 - 然后你点击并下载一个名叫 `aliedit.tar.gz` 的文件，接着在文件管理器(比如 Dolphin )里双击该文件，可以从 `aliedit.tar.gz` 文件里面解压出来一个脚本文件 `aliedit.sh`，放到你的家目录下。
 - 打开终端(比如 konsole)，运行下述命令：
-{% highlight bash %}
-sh ~/aliedit.sh
-{% endhighlight %}
+  {% highlight bash %}
+  sh ~/aliedit.sh
+  {% endhighlight %}
 - 最可能让你卡壳的一步来了，之所以这么说，是因为支付宝官方并没有说明支付宝安全控件到底有哪些依赖。这会让你以为跑完上面的脚本就万事大吉了。事实上安全控件依赖了 `libpng12-0`，而这个包恰恰是 openSUSE 默认没有安装的。运行下述命令进行安装：
-{% highlight bash %}
-sudo zypper in libpng12-0
-{% endhighlight %}
+  {% highlight bash %}
+  sudo zypper in libpng12-0
+  {% endhighlight %}
 
 好了，现在重新打开火狐浏览器并访问[支付宝首页](https://www.alipay.com/)，密码输入框是不是提示你，是否允许运行该控件？ 允许就是了，自此开启 openSUSE 上的淘宝之旅！
 
