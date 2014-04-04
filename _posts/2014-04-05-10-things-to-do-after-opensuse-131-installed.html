@@ -1,0 +1,86 @@
+<ol>
+<li>
+<h5>禁用官方源和DVD光盘源，启用中国大陆源</h5>
+使用DVD光盘安装好openSUSE 13.1之后，软件安装源中默认存在一个名称为"openSUSE-13.1-1.10"的软件源，这个源的URL实际上是指向DVD光驱的，可是一般情况下我们安装好系统之后，谁会一直把DVD盘放在光驱里面呢？这使得我们通过YaST或者zypper安装软件时，总是会浪费时间去检测该源是否可用。所以我建议大家把该软件源禁用掉，只有真的需要从光盘安装软件时才激活。 另外，对于中国大陆用户来说，要想在软件安装、系统更新升级时获得理想的下载速度，就近选择软件源的镜像站点非常重要，不然乌龟爬爬一般的速度会让你对世界失去信心！由于我是电信用户，所以搜狐镜像源对我来说是最合适的，每次都能达到近500K的满速下载。对于教育网用户，我建议添加上海交大镜像源。 要添加搜狐源并禁用官方源，请执行下述命令：
+<pre class="brush: bash">sudo zypper mr -d openSUSE-13.1-1.10
+sudo zypper mr -d openSUSE-13.1-Oss openSUSE-13.1-Non-Oss openSUSE-13.1-Update openSUSE-13.1-Update-Non-Oss
+sudo zypper ar -f http://mirrors.sohu.com/opensuse/distribution/13.1/repo/oss/ openSUSE-13.1-Oss-sohu-mirror
+sudo zypper ar -f http://mirrors.sohu.com/opensuse/distribution/13.1/repo/non-oss/ openSUSE-13.1-Non-Oss-sohu-mirror
+sudo zypper ar -f http://mirrors.sohu.com/opensuse/update/13.1/ openSUSE-13.1-Update-sohu-mirror
+sudo zypper ar -f http://mirrors.sohu.com/opensuse/update/13.1-non-oss/ openSUSE-13.1-Update-Non-Oss-sohu-mirror
+</pre>
+</li>
+<li>
+<h5>进行系统更新</h5>
+安装完成系统之后进行系统更新，能在第一时间修复openSUSE 13.1发布之后发现的故障和系统漏洞，保证系统稳定可靠，免受来自外界的恶意破坏。
+<pre class="brush: bash">sudo zypper update</pre>
+</li>
+<li>
+<h5>解决多媒体和受限格式文件的播放问题</h5>
+openSUSE 13.1默认没有安装那些受专利保护的多媒体编解码器，这导致了自带的Amarok不能播放MP3,WMA等格式,而自带的Kaffeine也不能播放RMVB等视频格式，虽然openSUSE 13.1出于规避专利风险的考虑，不安装这些多媒体编解码器，但是我们却可以自行安装。
+<ul>
+<li>
+<h6>解决Amarok不能播放mp3, wma的问题</h6>
+默认情况下Amarok是使用gstreamer作为后端的，直接执行下述命令即可：
+<pre class="brush: bash">sudo zypper in gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-fluendo-mp3  gstreamer-plugins-base</pre>
+</li>
+<li>
+<h6>安装smplayer, mplayer, w32codec-all</h6>
+kaffeine是基于xine的多媒体播放器，因此就算安装了w32codec-all也是不能播放mp3, rmvb等格式的，建议弃用，直接安装mplayer,smplayer。
+<pre class="brush: bash">sudo zypper ar -f http://packman.inode.at/suse/openSUSE_13.1/ packman
+sudo zypper refresh
+sudo zypper in  mplayer smplayer w32codec-all smplayer-lang
+</pre>
+</li>
+</ul>
+</li>
+<li>
+<h5>解决Firefox不能播放flash在线视频。</h5>
+在终端中运行下述命令后，重启firefox就可以了。
+<pre class="brush: bash">sudo zypper in flash-player flash-player-kde4 pullin-flash-player</pre>
+不过由于 Adobe 公司现在已经停止 Linux 版 Flash 浏览器插件的支持，在官方支持中，只有google chrome浏览器可以继续以pepper api的形式运行flash。所以，强烈推荐大家使用google chrome。安装过程也很简单，在终端中运行下述命令后，即可完成安装 google chrome。
+<pre class="brush: bash">sudo zypper ar -f http://dl.google.com/linux/chrome/rpm/stable/$(uname -m) Google-Chrome
+sudo zypper ref
+sudo zypper in google-chrome-stable</pre>
+</li>
+<li>
+<h5>安装 WPS 办公套件</h5>
+金山公司出品的 WPS For linux 使用 QT4 进行开发，原生跨平台；除延续Windows版相同体验外，更加尊重Linux用户特定的使用习惯；深度兼容微软 Office 格式；自带方正字体集；在线模板和素材使文档创作更加轻松高效。安装也很方便，访问 <a href="http://community.wps.cn/download/">http://community.wps.cn/download/</a> 下载最新的 Alpha 版本（截止本文完稿时最新的RPM下载链接：<a href="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/kingsoft-office-9.1.0.4207-0.1.a12p2.i686.rpm">请猛击这里</a>），然后双击下载好了的 RPM 包即可完成安装。需要提醒的事情是：<ol>
+<li>不要下载Beta版本，而应该下载Alpha版本，Alpha版本版本号比Beta版本高，开发更活跃。</li>
+<li>目前 WPS 没有提供 64位的版本，但是 32 位版本一样可以在 openSUSE 13.1 64位下正常安装和运行，因为安装过程中会自动下载32位的依赖包。</li>
+</ol></li>
+<li>
+<h5>安装 AMD/ATI 显卡私有驱动</h5>
+注意：该下述方法仅适用于 radeon HD5xxx 或以上的显卡！对于HD2xxx 和 HD4xxx 来说，强烈建议使用开源的 radeon 驱动（即系统自带的默认驱动），因为 openSUSE 13.1 使用的linux 内核版本是 3.11,在该内核版本中 radeon 的驱动已经得到大幅的改善！
+<pre class="brush: bash">sudo zypper ar -f http://geeko.ioda.net/mirror/amd-fglrx-beta/openSUSE_`lsb-release -r | awk '{print $2}'` amd-fglrx-beta
+sudo zypper refresh
+sudo zypper dup -r amd-fglrx-beta
+</pre>
+</li>
+<li>
+<h5>自动挂载windows分区</h5>
+下面的步骤描述的是自动挂载Windows C盘，要自动挂载其它盘，请仿照操作即可<ol>
+<li>在/media下面创建目录，名称为C。
+<pre class="brush: bash">sudo mkdir /media/C</pre>
+</li>
+<li>改变C文件夹的访问权限。确保所有用户都可以读、写、执行。
+<pre class="brush: bash">sudo chmod 777 /media/C</pre>
+</li>
+<li>打开yast，选择&ldquo;磁盘分区管理&rdquo; 选中你要自动挂载的设备，右键编辑，这样就打开了编辑分区的窗口。然后依次完成下述操作：<ol>
+<li>在挂载选项中选中&ldquo;挂载分区&rdquo;</li>
+<li>在&ldquo;挂载点&rdquo;输入框中 输入/media/C</li>
+<li>点击fstab选项，清除&ldquo;任意选项值&rdquo;输入框中的内容并输入 <code>umask=000,locale=zh_CN.UTF-8</code></li>
+</ol></li>
+</ol></li>
+<li>
+<h5>安装Oracle Java,移除 openjdk</h5>
+请参考本站博文《<a href="http://www.suselinks.us/install-oracle-sun-java-1-7-opensuse-12-2">在openSUSE 12.2上安装 Oracle(Sun) Java 1.7</a>》</li>
+<li>
+<h5>安装歌词字幕插件</h5>
+歌词字幕插件我最钟爱osdlyrics了，成熟稳定，支持绝大多数的音频播放器。
+<pre class="brush: bash">sudo zypper in osdlyrics</pre>
+</li>
+<li>
+<h5>解决系统时间总是比实际时间提前/延后8个小时的问题</h5>
+因为 在安装openSUSE的过程中，默认是选中了&rdquo;硬件时钟设置为UTC&ldquo;，这使得系统托盘中显示时间时是自动加了8个小时的。要解决该问题，请打开YaST，然后点击&rdquo;日期和时间&ldquo;，取消选中&rdquo;硬件时钟设置为UTC&ldquo;即可。</li>
+</ol>
