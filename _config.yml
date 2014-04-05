@@ -43,8 +43,8 @@ jiathis:
 links:
   - title: 关于我
     url: /about/
-  - title: 文章
-    url: /posts/
+  # - title: 文章
+  #   url: /posts/
   - title: 标签云
     url: /tags.html  
   - title: 订阅本站
