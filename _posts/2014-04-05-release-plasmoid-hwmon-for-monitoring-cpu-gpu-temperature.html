@@ -1,0 +1,25 @@
+---
+layout: post
+title: 硬件温度监控器-KDE下的桌面小部件
+description: "这是一款本人开发的用于KDE桌面的小部件。目前它可以为你监控CPU和nvidia显卡温度。"
+modified: 2014-04-05
+tags: [硬件温度监控器,linux,hardware temperature monitor,plasmoid,KDE,plasmoid-hwmon]
+---
+
+<p>这是一款本人开发的用于KDE桌面的小部件。目前它可以为你监控CPU和nvidia显卡温度。nvidia显卡温度监控依赖于 nvidia-smi 命令，所以你必须事先保证该命令在你的PATH路径中。 该部件的主界面中C代表CPU温度，G代表显卡温度，单位是摄氏度。配置界面中可以配置更新周期。周期越短实时性更高，同时小部件消耗CPU资源也越多。另外还有一个开关项用于打开trace开关，一般情况下建议关闭，当小部件出现故障时，你可以打开该开关，这时小部件会生成程序跟踪信息，并保存在文件 /tmp/net.ubuntudaily.hwmon.trace.log，你把该文件发给我，就可以辅助我定位问题啦！ 该小部件的源代码可以从这里下载：<a href="https://github.com/redhatlinux10/plasmoid-hwmon">https://github.com/redhatlinux10/plasmoid-hwmon</a></p>
+<h5>安装步骤</h5>
+<ol>
+<li>下载 plasmoid-hwmon.plasmoid 并保存到任意本地目录。下载页面在这里：<a href="http://kde-apps.org/content/show.php?content=158694">http://kde-apps.org/content/show.php?content=158694</a></li>
+<li>运行下述命令进行安装：
+<pre class="brush: bash">plasmapkg -i /path/to/plasmoid-hwmon.plasmoid</pre>
+</li>
+</ol>
+<h5>截图</h5>
+<p>主界面：</p>
+<p><img src="http://i.minus.com/ibk4AFnvj6UcYJ.png" alt="" /></p>
+<p>配置界面：</p>
+<p><img src="http://i.minus.com/iiurkNv6KvHNF.png" alt="" /></p>
+<h5>待完成</h5>
+<ol>
+<li>支持ATI显卡温度监控</li>
+</ol>
