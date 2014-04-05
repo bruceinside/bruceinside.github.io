@@ -1,0 +1,33 @@
+---
+layout: post
+title: 在 KDE 中使用 Windows 键来打开应用程序启动器
+description: "本文指导你实现：如何在 KDE 桌面环境中直接按 Win 键就可以打开开始菜单（应用程序启动器），并对实现原理进行了分析。"
+modified: 2014-04-05
+tags: [start menu,KDE,ksuperkey,应用程序启动器,开始菜单,windows 键,windows key,super key,application launcher, openSUSE]
+---
+
+<h5>令人头痛的问题</h5>
+<p>从 Windows 系统转移过来的用户总是习惯于按 Windows 键来打开开始菜单（在 KDE 下叫应用程序起动器）。Windows 键在 Linux 下被称为 Super 键，它被当成是修饰键（或者说辅助键），和 Ctrl 还有 Shift 键类似。所谓修饰键，顾名思义，就是当按下时会修改其它键的行为，举例来说，如果你在按下 A 键时同时按下 Shift 键，则 a 变成了 A。 一个常见的想法是：如果用 xmodmap 把 Super 键映射到其它快捷键上，那是否能解决我们的问题呢？ 回答是能，但是同时带来了其它问题。重新映射后，当按下 Super 键时，确实会调用重新映射的快捷键，但是与此同时， Super 键再也不能作为修饰键来使用了，对于像我这样严重依赖 Super 键的人来说（我使用它来启动和控制应用程序），失去多个组合键的代价，委实得不偿失。</p>
+<h5>完美的解决方案</h5>
+<p>要解决该问题，我们需要在释放（而不是按下） Super 键的时候调用其它快捷键。如果你在释放 Super 键之前按下了其它键，那就不调用快捷键，而是单纯的作为修饰键来使用。那要达成这样的功能，我们该怎么办呢？ 安装 ksuperkey 即可！ ksuperkey 是一款非常小的应用程序，使用它，你可以通过按下左边的 Super 键来打开应用程序起动器，与此同时，还可以继续保证 Super 键作为修饰键來使用。换句话说，它不影响你当前的键盘映射。</p>
+<h5>安装</h5>
+<ol>
+<li>以openSUSE为例，打开 <a href="http://software.opensuse.org/package/ksuperkey">http://software.opensuse.org/package/ksuperkey</a> 链接，根据你的 openSUSE 版本来选择适合你的 ksuperkey，然后点击 1 Click Install 进行一键安装。</li>
+<li>确保你的应用程序起动器的快捷键是 Alt+F1（当你单独按下并释放 Super 键时 ksuperkey 会发送该快捷键给操作系统）。右键单击应用程序启动器图标 -&gt; 应用程序设置 -&gt; 键盘快捷键来进行设置。</li>
+<li>在终端中运行 ksuperkey 命令，然后按 Super 键就可以打开应用程序启动器了！如果你希望每次登录系统都能通过 Super 键来打开应用程序起动器，则需要设置 ksuperkey 为自动启动，打开系统设置 -&gt; 开机和关机 -&gt; 自动启动 -&gt; 添加程序 -&gt; 在输入框中输入 ksuperkey ， 点击确定。</li>
+</ol>
+<h5>注意事项</h5>
+<ol>
+<li>安装步骤中我以openSUSE为例，介绍了如何通过 software.opensuse.org<a href="http://www.suselinks.us/">software.opensuse.org</a>一键安装 ksuperkey。如果你使用的是其它发行版本，比如 ubuntu，则可以运行下述命令进行安装：
+<pre class="brush: bash">sudo apt-get install git gcc make libx11-dev libxtst-dev pkg-config
+git clone https://github.com/hanschen/ksuperkey.git
+cd ksuperkey
+make
+./ksuperkey
+</pre>
+</li>
+<li>你可以把 ksuperkey 放在任意目录中。如果你把 ksuperkey 添加到自动启动中了，别忘记更新该命令的路径。</li>
+<li>你可以使用 ksuperkey 来做任何操作，比如打开 krunner，只需绑定 Alt+F1 到该操作即可。</li>
+<li>如果你想让 ksuperkey 发送其它快捷键，比如Alt+F2,那么需要修改 ksuperkey 的源代码了。在文本编辑器中打开 xcape.c，跳转到 92 行然后修改 XK_F1，然后重新编译。</li>
+<li>ksuperkey 在其它的窗口管理器里也能正常工作，但是如果 Super 键已经被用于非修饰键（Unity, GNOME Shell），则可能出现问题。</li>
+</ol>
