@@ -1,0 +1,118 @@
+---
+layout: post
+title: linux系统下Sublime Text 2编辑器fcitx中文输入的解决方法
+description: "linux系统下Sublime Text 2编辑器如何输入中文？本文就是来拯救你的！"
+modified: 2014-04-05
+tags: [输入中文,fcitx,input cjk,sublime text 2,linux]
+image:
+  feature: texture-feature-05.jpg
+  credit: Texture Lovers
+  creditlink: http://texturelovers.com
+---
+
+<p>作为一款跨 OS X、Linux 和 Windows 三大系统平台的文字编辑器，Sublime Text 2的强大功能我就不废话了，但是令人蛋疼的是，在linux平台中Sublime Text 2的中文输入问题却一直悬而未决。令人欣慰的是，Sublime Text 2论坛的cjacker给我们提供了一个临时解决方案。现在我以openSUSE12.3系统为例，给大家讲解下如何具体操作。</p>
+<h5>安装Sublime Text 2</h5>
+<p>在openSUSE下安装软件永远是这么的简单，你只需在浏览器中打开 <a href="http://software.opensuse.org/package/sublimetext">Sublime Text 2安装链接</a>，按照页面提示，即可完成Sublime Text 2的一键安装。</p>
+<h5>编译共享内库</h5>
+<ol>
+<li>保存下述代码为 <em>sublime-imfix.c</em>文件
+<pre class="brush: cpp">/*
+sublime-imfix.c
+Use LD_PRELOAD to interpose some function to fix sublime input method support for linux.
+By Cjacker Huang &lt;jianzhong.huang at i-soft.com.cn&gt;
+
+gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
+LD_PRELOAD=./libsublime-imfix.so sublime_text
+*/
+#include &lt;gtk/gtk.h&gt;
+#include &lt;gdk/gdkx.h&gt;
+typedef GdkSegment GdkRegionBox;
+
+struct _GdkRegion
+{
+  long size;
+  long numRects;
+  GdkRegionBox *rects;
+  GdkRegionBox extents;
+};
+
+GtkIMContext *local_context;
+
+void
+gdk_region_get_clipbox (const GdkRegion *region,
+            GdkRectangle    *rectangle)
+{
+  g_return_if_fail (region != NULL);
+  g_return_if_fail (rectangle != NULL);
+
+  rectangle-&gt;x = region-&gt;extents.x1;
+  rectangle-&gt;y = region-&gt;extents.y1;
+  rectangle-&gt;width = region-&gt;extents.x2 - region-&gt;extents.x1;
+  rectangle-&gt;height = region-&gt;extents.y2 - region-&gt;extents.y1;
+  GdkRectangle rect;
+  rect.x = rectangle-&gt;x;
+  rect.y = rectangle-&gt;y;
+  rect.width = 0;
+  rect.height = rectangle-&gt;height; 
+  //The caret width is 2; 
+  //Maybe sometimes we will make a mistake, but for most of the time, it should be the caret.
+  if(rectangle-&gt;width == 2 &amp;&amp; GTK_IS_IM_CONTEXT(local_context)) {
+        gtk_im_context_set_cursor_location(local_context, rectangle);
+  }
+}
+
+//this is needed, for example, if you input something in file dialog and return back the edit area
+//context will lost, so here we set it again.
+
+static GdkFilterReturn event_filter (GdkXEvent *xevent, GdkEvent *event, gpointer im_context)
+{
+    XEvent *xev = (XEvent *)xevent;
+    if(xev-&gt;type == KeyRelease &amp;&amp; GTK_IS_IM_CONTEXT(im_context)) {
+       GdkWindow * win = g_object_get_data(G_OBJECT(im_context),"window");
+       if(GDK_IS_WINDOW(win))
+         gtk_im_context_set_client_window(im_context, win);
+    }
+    return GDK_FILTER_CONTINUE;
+}
+
+void gtk_im_context_set_client_window (GtkIMContext *context,
+          GdkWindow    *window)
+{
+  GtkIMContextClass *klass;
+  g_return_if_fail (GTK_IS_IM_CONTEXT (context));
+  klass = GTK_IM_CONTEXT_GET_CLASS (context);
+  if (klass-&gt;set_client_window)
+    klass-&gt;set_client_window (context, window);
+
+  if(!GDK_IS_WINDOW (window))
+    return;
+  g_object_set_data(G_OBJECT(context),"window",window);
+  int width = gdk_window_get_width(window);
+  int height = gdk_window_get_height(window);
+  if(width != 0 &amp;&amp; height !=0) {
+    gtk_im_context_focus_in(context);
+    local_context = context;
+  }
+  gdk_window_add_filter (window, event_filter, context); 
+}
+  </pre>
+</li>
+<li>安装gtk2-devel
+<pre class="brush: bash">sudo zypper in gtk2-devel</pre>
+<em>注：其它发行版中，要安装的软件包名可能会有差异性，请酌情修改。</em></li>
+<li>编译共享内库
+<pre class="brush: bash">gcc -shared -o libsublime-imfix.so sublime-imfix.c  `pkg-config --libs --cflags gtk+-x11-2.0` -fPIC</pre>
+<em>注：其它发行版中，上述语句中的 <strong>gtk+-x11-2.0</strong> 可能需要替换成其它的值，具体是多少，可以执行命令 <span class="lang:default decode:true  crayon-inline ">pkg-config --list-all</span> 来获知，请酌情修改。</em></li>
+</ol>
+<h5>启动 Sublime Text 2</h5>
+<p>好了，现在执行下述命令启动 Sublime Text 2，就可以使用fcitx输入中文了！</p>
+<pre class="brush: bash">LD_PRELOAD=./libsublime-imfix.so sublime_text</pre>
+<h5>截图</h5>
+<p><img src="http://i.imgur.com/ZTN8kFv.png" alt="" /></p>
+<h5>再唠叨几句</h5>
+<ol>
+<li>本方法在 32位 openSUSE12.3 系统上验证通过。Sublime Text版本是2.0.1,build 2217，fcitx版本是4.2.7-1.4.1</li>
+<li>编译 <em>libsublime-imfix.so</em> 完成之后，可以执行 <span class="lang:default decode:true  crayon-inline ">sudo zypper rm -u gtk2-devel</span> 把之前安装的所有开发包都删除掉</li>
+<li>如果嫌每次都这么去启动很麻烦，可以在桌面上建立一个快捷方式（新建&rarr;链接到应用程序）</li>
+<li>如果试图在 <em>~/.bashrc</em> 脚本中添加 <span class="lang:default decode:true  crayon-inline ">export LD_PRELOAD=/path/to/libsublime-imfix.so</span> 来达到同样的方法，会导致fcitx在其它的地方（比如kate）无法输入中文了！不要试图这么做！</li>
+</ol>
