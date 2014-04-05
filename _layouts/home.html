@@ -36,12 +36,15 @@
 
 <div id="index">
   <h3><a href="{{ site.url}}/articles/">文章列表</a></h3>
-  {% for post in site.posts limit:5 %}    
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}  
   <article>
     <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
     <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
   </article>
   {% endfor %}
+  
+
 </div><!-- /#index -->
 
 <div class="footer-wrap">
