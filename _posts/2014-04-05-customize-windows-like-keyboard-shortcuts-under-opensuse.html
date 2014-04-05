@@ -1,0 +1,65 @@
+---
+layout: post
+title: 定制openSUSE快捷键 - 延续Windows下的使用习惯
+description: "熟悉windows系统的人，大概都是熟悉那些和Windows 徽标键相关的快捷键的，例如按下Win + D组合键，可以快速显示桌面。那在openSUSE系统中，是否也可以实现同样的功能呢？答案是肯定的。 下面我带领大家设置几个非常常见的快捷键，仅以抛砖引玉。"
+modified: 2014-04-05
+tags: [openSUSE, windows like shortcut, Win key, Windows key, Win键]
+image:
+  feature: texture-feature-05.jpg
+  credit: Texture Lovers
+  creditlink: http://texturelovers.com
+---
+
+<p>熟悉windows系统的人，大概都是熟悉那些和Windows 徽标键相关的快捷键的，例如按下Win + D组合键，可以快速显示桌面。那在openSUSE系统中，是否也可以实现同样的功能呢？答案是肯定的。 下面我带领大家设置几个非常常见的快捷键，仅以抛砖引玉。</p>
+<h5>Win + D（显示桌面）</h5>
+<ol>
+<li>打开系统设置窗口</li>
+<li>选择快捷方式和手势</li>
+<li>点击左边栏中的全局键盘快捷键</li>
+<li>KDE组件选择 &ldquo;kwin&rdquo;</li>
+<li>在搜索里输入&ldquo;显示桌面&rdquo;</li>
+<li>点击搜索结果列表中的&ldquo;显示桌面&rdquo;</li>
+<li>选择自定义，设置快捷键为 <em>Win + D</em></li>
+</ol>
+<h5>Win + E（打开 Dolphin 文件管理器）</h5>
+<ol>
+<li>打开系统设置窗口</li>
+<li>选择快捷方式和手势</li>
+<li>点击左边栏中的自定义快捷键</li>
+<li>在树状导航窗口中点击右键</li>
+<li>选择新建 &rarr; 全局快捷键 &rarr; 命令/URL</li>
+<li>把新增的条目重命名为&ldquo;打开Dolphin文件管理器&rdquo;</li>
+<li>在右边的注释页签中输入&ldquo;打开Dolphin文件管理器&rdquo;</li>
+<li>在触发器页签中设置快捷键为<em>Win + E</em></li>
+<li>在动作页签中输入命令:
+<pre class="brush: bash">dolphin</pre>
+</li>
+</ol>
+<h5>Win + F（搜索文件或文件夹）</h5>
+<ol>
+<li>运行命令
+<pre class="brush: java">sudo zypper in kfind</pre>
+&nbsp;安装kfind程序</li>
+<li>打开系统设置窗口</li>
+<li>选择快捷方式和手势</li>
+<li>点击左边栏中的自定义快捷键</li>
+<li>在树状导航窗口中点击右键</li>
+<li>选择新建 &rarr; 全局快捷键 &rarr; 命令/URL</li>
+<li>把新增的条目重命名为&ldquo;打开kfind&rdquo;</li>
+<li>在右边的注释页签中输入&ldquo;打开kfind&rdquo;</li>
+<li>在触发器页签中设置快捷键为 <em>Win + F</em></li>
+<li>在动作页签中输入命令:&nbsp;
+<pre class="brush: bash">kfind</pre>
+</li>
+</ol>
+<h5>Win + L(锁定您的计算机)</h5>
+<ol>
+<li>打开系统设置窗口</li>
+<li>选择快捷方式和手势</li>
+<li>点击左边栏中的全局键盘快捷键</li>
+<li>KDE组件选择&ldquo;KDE会话管理器&rdquo;</li>
+<li>在搜索里输入&ldquo;lock session&rdquo;或者 "锁住会话"</li>
+<li>点击搜索结果列表中的&ldquo;lock session&rdquo;或者 "锁住会话"</li>
+<li>选择自定义，设置快捷键为 <em>Win + L</em></li>
+</ol>
+<p>有点令人遗憾的是，Win键在openSUSE中被识别为Meta键，而单独的Meta键是不能作为快捷键的。也就是说，我们无法让openSUSE像windows那样，按一下Win键就打开开始菜单，至少在不修改键盘映射的情况下无法实现。</p>
