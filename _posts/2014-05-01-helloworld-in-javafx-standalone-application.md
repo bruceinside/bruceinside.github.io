@@ -9,12 +9,12 @@ JavaFX 是什么我就不赘言了，大家可以参考[Wikipedia 的 JavaFX 词
 
 好了，我们切入正题。
 
-要开发和运行 JavaFX 程序，你必须有 JavaFX 的SDK 包。从 JDK 7u6 开始， JavaFX 已经默认包含在标准 JDK 和 JRE 包中了。为简单起见，我强烈建议你安装最新的 Java 8,它默认内置了 JavaFX 8 版本。如何安装 JDK 8,我这里不赘述了，不过如果你使用的是 openSUSE 系统，你倒是可以参考 《[在 openSUSE 上安装 Oracle JDK8 详解](http://suselinks.us/install-oracle-jdk8-on-opensuse/)》。
+要开发和运行 JavaFX 程序，你必须有 JavaFX 的SDK 包。从 JDK 7u6 开始， JavaFX 已经默认包含在标准 JDK 和 JRE 包中了。为简单起见，我强烈建议你安装最新的 Java 8,它默认内置了 JavaFX 8 版本。如何安装 JDK 8,我这里不赘述了，不过如果你使用的是 openSUSE 系统，你倒是可以参考 《[在 openSUSE 上安装 Oracle JDK8 详解]({{ site.url }}/install-oracle-jdk8-on-opensuse/)》。
 
 要跟你讲如何创建一个 JavaFX 应用程序，最好的方法就是写一个 “Hello World” 程序给你看。这篇教程的一个额外好处是可以用来测试你的 JavaFX 是否正确安装了。
 
 本教程的使用的 JDK8 + Eclipse Luna （支持 Java 8）。在你开始之前，请确保正确安装了 JDK 8 和 Eclipse Luna。
-Eclipse Luna 的安装请参考 《[在 Eclipse 中支持 Java 8](http://suselinks.us/java-8-in-eclipse-kepler-and-luna/)》
+Eclipse Luna 的安装请参考 《[在 Eclipse 中支持 Java 8]({{ site.url }}/java-8-in-eclipse-kepler-and-luna/)》
 
 #### 编写应用程序
 
