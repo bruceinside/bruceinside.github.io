@@ -8,9 +8,7 @@ tags: [eclipse, kepler, luna, java 8]
 
 
 Java 8 出来已经有段时日了，它是在今年 3 月 18 日正式发布的。 耶! 
-
 但是 Eclipse 作为最大最流行的 Java IDE（至少我这么认为），进度却有点滞后了，到现在为止还没有一个默认支持 Java 8 的 Eclipse 正式版本发布！
-
 虽说如此，我们还是可以在 Eclipse 上进行 Java 8 开发的，因为我前面说的是没有一个**默认支持** Java 8 的 Eclipse **正式版本**。
 
 
