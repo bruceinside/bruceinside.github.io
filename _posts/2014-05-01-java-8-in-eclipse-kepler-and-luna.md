@@ -14,13 +14,13 @@ Java 8 出来已经有段时日了，它是在今年 3 月 18 日正式发布的
 #### 在 Eclipse Kepler (4.3) 中支持 Java 8
 ![Eclipse kepler splash screen](http://suselinks-us.qiniudn.com/eclipse-kepler-splash-screen.png)
 
-Kepler (4.3) 是当前最新的发布版本。你可以从 [](http://www.eclipse.org/downloads) 下载。默认情况下 Kepler 是不支持 Java 8的。你必须安装一个补丁才行。
+Kepler (4.3) 是当前最新的发布版本。你可以从 [http://www.eclipse.org/downloads](http://www.eclipse.org/downloads) 下载。默认情况下 Kepler 是不支持 Java 8的。你必须安装一个补丁才行。
 
 0. 下载安装 Java 8（从 Oracle [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)/[JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or [OpenJDK](https://jdk8.java.net/download.html)）。如果使用的是 openSUSE 系统，你可以参考这篇博文《[在 openSUSE 上安装 Oracle JDK8 详解](http://suselinks.us/install-oracle-jdk8-on-opensuse/)》。
 0. 把它添加到 Eclipse ：
 ![](http://suselinks-us.qiniudn.com/eclipse-installed-jre.png)
 0. 安装补丁。打开 Help → Install New Software...：
-[](http://download.eclipse.org/eclipse/updates/4.3-P-builds/)
+[http://download.eclipse.org/eclipse/updates/4.3-P-builds/](http://download.eclipse.org/eclipse/updates/4.3-P-builds/)
 ![](http://suselinks-us.qiniudn.com/kepler-install-java8-patch.png)
 
 安装完成之后你需要重启 eclipse 。
@@ -34,7 +34,8 @@ Luna (4.4) 是正在开发中的 eclipse 版本。将在这个夏天发布并默
 
 #### 简单测试 Java 8
 要测试你安装的 Eclipse 版本是否支持 Java 8,这有一个非常简单的代码片段：
-~~~
+
+~~~java
 public class Test {
     public static void main(String[] args) {
         new Thread(() -> System.out.println("Hello Java 8!")).start();
