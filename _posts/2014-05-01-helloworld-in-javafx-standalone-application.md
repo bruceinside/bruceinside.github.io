@@ -66,9 +66,9 @@ JavaFX 应用程序的主类继承了 `javafx.application.Application` 类。`st
 
 JavaFX 应用程序通过 `Stage` 和 `Scene` 来定义用户界面容器。`Stage` 类是 JavaFX 的顶级容器类。`Scene` 类是所有内容的容器。上述代码创建了 `Scene` ,指定了 `Scene` 的大小。
 
-在 JavaFX 中， scene 的内容表现为许多节点的层次结构图。在我们d代码中，根节点是一个 `StackPane` 对象，这是一个可调整大小的布局节点。换句话说，根节点的大小会随 scene 的大小而改变（比如当用户改变了 stage的大小）。
+在 JavaFX 中， scene 的内容表现为许多节点的层次结构图。在我们代码中，根节点是一个 `StackPane` 对象，这是一个可自动调整大小的布局节点。换句话说，根节点的大小会随 scene 的大小而改变（比如当用户改变了 stage的大小）。
 
-根节点只包含了一个子节点，一个有文字的按钮控件，这个按钮绑定了事件处理器，当按下按钮时会打印 "Hello World!"。
+根节点只包含了一个子节点，一个有文字的按钮控件，这个按钮绑定了事件处理器，当按下按钮时会打印 *"Hello World!"*。
 
 当你用 JavaFX Packager 打包工具来创建应用程序的 JAR 包时，会把 JavaFX 起动器嵌入到 JAR 包中，在这种情况下，`main()` 方法并不是必须存在于 JavaFX 应用程序中的。但是，如果你要运行不包含 JavaFX 启动器的 JAR 包，那 `main()` 方法就很有用了，比如使用并不完全和 JavaFX 集成的 IDE 工具。而且，嵌入了 JavaFX 代码的Swing程序也需要 `main()` 方法。
 
@@ -79,6 +79,7 @@ JavaFX 应用程序通过 `Stage` 和 `Scene` 来定义用户界面容器。`Sta
 0. 在 Package Explorer 视图中，右击 HelloWorld.java 类，选择 run as -> Java Application
 0. 点击 Say Hello World 按钮
 0. 在 eclipse 的 Console 视图中看是否打印了 Hello World!
+
 下图是 helloworld 应用的截图：
 ![](http://suselinks-us.qiniudn.com/helloworld-in-javafx-style.png)
 
