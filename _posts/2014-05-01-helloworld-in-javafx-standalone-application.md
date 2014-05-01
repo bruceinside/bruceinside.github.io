@@ -23,7 +23,7 @@ Eclipse Luna 的安装请参考 《[在 Eclipse 中支持 Java 8]({{ site.url }}
 0. 把工程命名为 HelloWorld 并点击完成。这里注意一下，务必选择Java 8 作为工程的 JRE。
 0. 右击刚刚新建的 Java 工程，选择 new → class, 包名为 test, 类名为 HelloWorld。
 0. 打开新建的类，把下述代码复制粘贴进去。
-    {% highlight java %}
+    {% highlight java linenos %}
     package test;
 
     import javafx.application.Application;
