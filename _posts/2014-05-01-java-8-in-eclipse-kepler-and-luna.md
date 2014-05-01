@@ -22,7 +22,11 @@ Kepler (4.3) 是当前最新的发布版本。你可以从 [http://www.eclipse.o
 0. 把它添加到 Eclipse ：
 ![](http://suselinks-us.qiniudn.com/eclipse-installed-jre.png)
 0. 安装补丁。打开 Help → Install New Software...：
-[http://download.eclipse.org/eclipse/updates/4.3-P-builds/](http://download.eclipse.org/eclipse/updates/4.3-P-builds/)
+
+~~~
+http://download.eclipse.org/eclipse/updates/4.3-P-builds/
+~~~
+
 ![](http://suselinks-us.qiniudn.com/kepler-install-java8-patch.png)
 
 安装完成之后你需要重启 eclipse 。
@@ -36,13 +40,14 @@ Luna (4.4) 是正在开发中的 eclipse 版本。将在这个夏天发布并默
 
 #### 简单测试 Java 8
 要测试你安装的 Eclipse 版本是否支持 Java 8,这有一个非常简单的代码片段：
-{% highlight java %}
+
+~~~java
 public class Test {
     public static void main(String[] args) {
         new Thread(() -> System.out.println("Hello Java 8!")).start();
     }
 }
-{% endhighlight %}
+~~~
 
 #### 疑难问题解决
 如果你的 Eclipse 还是不支持 Java 8,你需要检查你的工程设置。如果工程的兼容级别(compliance level) 没有设置为 1.8，你就用不了 Java 8 了。如果兼容列表里面连 1.8 都没有，那可能极有可能你需要重新下载 Kepler 版本并安装补丁包，或者下载合适的 Luna 开发构建，就如我上面所说的那样。
