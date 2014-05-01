@@ -1,6 +1,7 @@
 ---
 layout: post
 title: JavaFX 独立应用程序开发系列 - Hello World !
+date: 2014-05-01 17:30:00 +0800
 description: "讲解 hello world 小程序，引导你快速了解如何开发 JavaFX 的独立图形应用程序"
 tags: [Java, JavaFX]
 ---

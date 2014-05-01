@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 在 Eclipse 中支持 Java 8
+date: 2014-05-01 15:30:00 +0800
 description: "指导你如何让你的 Eclipse Kepler 和 Luna 版本支持 Java 8"
 tags: [eclipse, kepler, luna, java 8]
 ---
