@@ -23,42 +23,42 @@ Eclipse Luna 的安装请参考 《[在 Eclipse 中支持 Java 8]({{ site.url }}
 0. 把工程命名为 HelloWorld 并点击完成。这里注意一下，务必选择Java 8 作为工程的 JRE。
 0. 右击刚刚新建的 Java 工程，选择 new → class, 包名为 test, 类名为 HelloWorld。
 0. 打开新建的类，把下述代码复制粘贴进去。
-    {% highlight java linenos %}
-    package test;
+        {% highlight java linenos %}
+        package test;
 
-    import javafx.application.Application;
-    import javafx.event.ActionEvent;
-    import javafx.event.EventHandler;
-    import javafx.scene.Scene;
-    import javafx.scene.control.Button;
-    import javafx.scene.layout.StackPane;
-    import javafx.stage.Stage;
+        import javafx.application.Application;
+        import javafx.event.ActionEvent;
+        import javafx.event.EventHandler;
+        import javafx.scene.Scene;
+        import javafx.scene.control.Button;
+        import javafx.scene.layout.StackPane;
+        import javafx.stage.Stage;
 
-    public class HelloWorld extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("Hello World!");
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        public class HelloWorld extends Application {
+        public static void main(String[] args) {
+            launch(args);
+        }
 
         @Override
-        public void handle(ActionEvent event) {
-            System.out.println("Hello World!");
-        }
-        });
+        public void start(Stage primaryStage) {
+            primaryStage.setTitle("Hello World!");
+            Button btn = new Button();
+            btn.setText("Say 'Hello World'");
+            btn.setOnAction(new EventHandler<ActionEvent>() {
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        primaryStage.setScene(new Scene(root, 300, 250));
-        primaryStage.show();
-    }
-    }
-    {% endhighlight %}
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+            });
+
+            StackPane root = new StackPane();
+            root.getChildren().add(btn);
+            primaryStage.setScene(new Scene(root, 300, 250));
+            primaryStage.show();
+        }
+        }
+        {% endhighlight %}
 
 下面讲解有关 JavaFX 应用程序基本结构的要点：
 
