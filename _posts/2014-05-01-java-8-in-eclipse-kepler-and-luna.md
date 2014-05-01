@@ -7,7 +7,9 @@ tags: [eclipse, kepler, luna, java 8]
 
 
 Java 8 出来已经有段时日了，它是在今年 3 月 18 日正式发布的。 耶! 
+
 但是 Eclipse 作为最大最流行的 Java IDE（至少我这么认为），进度却有点滞后了，到现在为止还没有一个默认支持 Java 8 的 Eclipse 正式版本发布！
+
 虽说如此，我们还是可以在 Eclipse 上进行 Java 8 开发的，因为我前面说的是没有一个**默认支持** Java 8 的 Eclipse **正式版本**。
 
 
@@ -34,14 +36,13 @@ Luna (4.4) 是正在开发中的 eclipse 版本。将在这个夏天发布并默
 
 #### 简单测试 Java 8
 要测试你安装的 Eclipse 版本是否支持 Java 8,这有一个非常简单的代码片段：
-
-~~~java
+{% highlight java %}
 public class Test {
     public static void main(String[] args) {
         new Thread(() -> System.out.println("Hello Java 8!")).start();
     }
 }
-~~~
+{% endhighlight %}
 
 #### 疑难问题解决
 如果你的 Eclipse 还是不支持 Java 8,你需要检查你的工程设置。如果工程的兼容级别(compliance level) 没有设置为 1.8，你就用不了 Java 8 了。如果兼容列表里面连 1.8 都没有，那可能极有可能你需要重新下载 Kepler 版本并安装补丁包，或者下载合适的 Luna 开发构建，就如我上面所说的那样。
