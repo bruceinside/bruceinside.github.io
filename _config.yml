@@ -46,7 +46,7 @@ links:
   # - title: 文章
   #   url: /posts/
   - title: 标签云
-    url: /tags.html  
+    url: /tags/ 
   - title: 订阅本站
     url: /atom.xml    
   ## - title: Theme Setup
