@@ -6,9 +6,9 @@ tagline: Minimal Mistakes, a Jekyll Theme
 tags: [ZTE, 中兴, Bruce Auyeung, openSUSE, Java, bruce.oy@gmail.com]
 modified: 3-23-2014
 image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: openSUSE-banner.png
+  credit: anditosan
+  creditlink: http://anditosan.deviantart.com/
 ---
 
 我是谁？
