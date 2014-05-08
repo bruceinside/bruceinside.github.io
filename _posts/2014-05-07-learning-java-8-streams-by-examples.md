@@ -56,6 +56,7 @@ public class StreamBuilders {
 }
 {% endhighlight %}
 
+
 **使用 `Collection.stream()`**
 
 {% highlight java linenos %}
@@ -67,6 +68,7 @@ public class StreamBuilders {
     }
 }
 {% endhighlight %}
+
 
 **使用 `generate()`**
 
@@ -81,6 +83,7 @@ public class StreamBuilders {
 }
 {% endhighlight %}
 
+
 **使用 `iterate()`**
 
 {% highlight java linenos %}
@@ -91,6 +94,7 @@ public class StreamBuilders {
     }
 }
 {% endhighlight %}
+
 
 **使用 `CharSequence.chars()`**
 
@@ -122,6 +126,7 @@ public class StreamBuilders {
 }
 {% endhighlight %}
 
+
 **使用 `stream.collect(Collectors.toSet())` 把 `Stream` 转换为 `Set`**
 
 {% highlight java linenos %}
@@ -134,6 +139,7 @@ public class StreamBuilders {
     }
 }
 {% endhighlight %}
+
 
 **使用 `stream.toArray(EntryType[]::new)` 把 `Stream` 转换为数组**
 
@@ -176,6 +182,7 @@ provinceNames.stream().filter((p) -> p.startsWith("湖")).forEach(p -> System.ou
 // 湖南, 湖北, 
 {% endhighlight %}
 
+
 **`map()`**
 
 这个中间操作使用给定的函数把流中的每个元素转换为另一个对象。下面的例子把每个字符串转化为另一个字符串（末尾多了一个人字）。但是你也可以把每个对象转换为其它类型的对象。
@@ -185,6 +192,7 @@ provinceNames.stream().map(p -> p + "人, ").forEach(p -> System.out.print(p));
 // 输出 : 
 // 湖南人, 湖北人, 河南人, 河北人, 广东人, 广西人, 北京人, 南京人, 
 {% endhighlight %}
+
 
 **`sorted()`**
 
@@ -224,6 +232,7 @@ System.out.print(provinceNamesOrdered);
 // [北京, 南京, 广东, 广西, 河北, 河南, 湖北, 湖南]
 {% endhighlight %}
 
+
 **`match()`**
 
 各种匹配操作用来检查流中的元素是否指定断言条件。所有的匹配操作都是末端操作，它们返回布尔结果。
@@ -244,6 +253,7 @@ System.out.println(matchedResult);
 // false
 {% endhighlight %}
 
+
 **`count()`**
 
 count 末端操作返回流中元素个数。
@@ -254,6 +264,8 @@ System.out.println(totalMatched);
 
 // 输出 : 8
 {% endhighlight %}
+
+
 
 **`reduce()`**
 
@@ -281,6 +293,8 @@ System.out.println(matched);
 
 // 输出 : true
 {% endhighlight %}
+
+
 
 **`findFirst()`**
 
