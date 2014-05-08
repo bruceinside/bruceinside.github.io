@@ -2,7 +2,7 @@
 layout: post
 title: 学习 Java 8 - Stream 举例说明
 date: 2014-05-08 17:30:00 +0800
-description: "通过多个代码示例，从多个角度对 Java 8 新引入的 Stream 进行说明"
+description: "通过多个代码示例，从多个角度对 Java 8 新引入的 Stream 进行解读"
 tags: [Java, Java 8, Stream]
 ---
 
