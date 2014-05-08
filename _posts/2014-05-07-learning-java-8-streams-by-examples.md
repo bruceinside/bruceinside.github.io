@@ -46,7 +46,6 @@ tags: [Java, Java 8, Stream]
 下面是最常见的从集合产生流对象的方式
 
 **使用 `Stream.of()`**
-
 {% highlight java linenos %}
 public class StreamBuilders {
     public static void main(String[] args) {
@@ -58,7 +57,6 @@ public class StreamBuilders {
 
 
 **使用 `Collection.stream()`**
-
 {% highlight java linenos %}
 public class StreamBuilders {
     public static void main(String[] args) {
@@ -71,7 +69,6 @@ public class StreamBuilders {
 
 
 **使用 `generate()`**
-
 {% highlight java linenos %}
 public class StreamBuilders {
     public static void main(String[] args) {
@@ -85,7 +82,6 @@ public class StreamBuilders {
 
 
 **使用 `iterate()`**
-
 {% highlight java linenos %}
 public class StreamBuilders {
     public static void main(String[] args) {
@@ -97,7 +93,6 @@ public class StreamBuilders {
 
 
 **使用 `CharSequence.chars()`**
-
 {% highlight java linenos %}
 public class StreamBuilders {
     public static void main(String[] args) {
