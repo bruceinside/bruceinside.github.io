@@ -6,6 +6,8 @@ description: "通过多个代码示例，从多个角度对 Java 8 新引入的 
 tags: [Java, Java 8, Stream]
 ---
 
+    
+    
 在上一篇文章中，我们学习了《[内部迭代与外部迭代对比](http://suselinks.us/learning-java-8-internal-vs-external-iteration/)》，知道了内部迭代如何帮助我们专注于业务逻辑而无需关心迭代过程，它使得代码更加简洁和具有可读性。在这篇文章中，我们要探讨 Java 8 新引入的另一个概念 - 流（`Stream`） 。
 
 流（`Stream`） 可以定义为从一个源读取而来的支持聚集操作的一系列元素。这里说的源指的是集合或者数组，她们可以为源提供数据。流（`Stream`） 中数据的顺序和源保持一致。聚集操作或者批量操作允许我们很容易对流（`Stream`） 中的元素进行常见操作。
@@ -22,6 +24,8 @@ tags: [Java, Java 8, Stream]
 * [短路操作](#short-circuit-operations)
 * [并行处理](#parallelism)
 
+    
+    
 在继续下文之前，有必要事先说明一下， Java 8 中的多数流操作只返回流对象。这有助于写出链式流操作，我们管这个叫管线。在这篇文章中我会多次使用这个术语，所以务必记住了哦。
 
 #### <a name="streams-vs-collections"></a>流 vs. 集合
