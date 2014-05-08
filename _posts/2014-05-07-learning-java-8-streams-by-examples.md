@@ -43,8 +43,7 @@ tags: [Java, Java 8, Stream]
 
 #### <a name="ifferent-ways-to-build-streams"></a>各种构建流对象的方式
 
-下面是最常见的从集合产生流对象的方式
-
+下面是最常见的从集合产生流对象的方式    
 **使用 `Stream.of()`**
 {% highlight java linenos %}
 public class StreamBuilders {
