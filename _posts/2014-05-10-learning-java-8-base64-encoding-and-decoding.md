@@ -2,7 +2,7 @@
 layout: post
 title: 学习 Java 8 - Base64 编解码
 date: 2014-05-10 13:30:00 +0800
-description: "通过代码举例，使用 Java 8 新增的 `java.util.Base64` 类进行 Base64 编解码。"
+description: "通过代码举例，使用 Java 8 新增的 java.util.Base64 类进行 Base64 编解码。"
 tags: [Java, Java 8, Base64, Encoding, Decoding]
 ---
 
@@ -18,7 +18,7 @@ Base64 编码可以把二进制数据转换为可打印的 ASCII 字符，通常
 - 10 个数字 [0...9]
 - 2 个其它符号，原始 Base64 中这两个字符是指 '+', '/'， 但是不同的 Base64 实现并不完全相同，请参考[这里](http://en.wikipedia.org/wiki/Base64#Implementations_and_history)
 
-Base64 编码之后的字符串只包含上述字符，是可以在网络上安全传输的，哪怕是你的源数据是文本，你无需再担心因为控制字符的混淆而丢失数据。
+Base64 编码之后的字符串只包含上述字符，是可以在网络上安全传输的，哪怕你的源数据是文本，你无需再担心因为控制字符的混淆而丢失数据。
 
 #### Java 8 之前的 Base64 支持
 
@@ -26,8 +26,10 @@ Base64 编码之后的字符串只包含上述字符，是可以在网络上安�
 
 #### Java 8 中的 Base64 支持
 
-Java 8 新增了一个类（ `java.util.Base64` ）用于 Base64 编解码。我们通过例子来介绍如何使用它。    
+Java 8 新增了一个类（ `java.util.Base64` ）用于 Base64 编解码。我们通过例子来介绍如何使用它。
+
 **对字符串进行 Base64 编码**
+
 下面是一个简单例子，演示了如何获取一个 `Base64.Encoder` 实例然后使用它来对字符串进行编码。
 
 {% highlight java linenos %}
