@@ -27,6 +27,7 @@ ul#nav>li.item$*4>a{Item $}
 {% endhighlight %}
 
 ![zen coding in kate](http://suselinks-us.qiniudn.com/zen-coding-in-kate.gif)
+
 要完成这种快速展开，你只需把光标放在该表达式的末尾，然后点击 *工具 → 脚本 → Emmet → 展开缩写* 即可。
 
-通常我会给该功能绑定快捷键为 `CTRL+1` 。绑定可以在 *设置 → 配置快捷键* 里面完成。
+通常我会给该功能绑定快捷键为 `CTRL+1`( 在 Eclipse 中该快捷键为 *快速修复* ) 。绑定可以在 *设置 → 配置快捷键* 里面完成。
