@@ -2,7 +2,7 @@
 layout: post
 title: Kate 中的禅意编程
 date: 2014-05-10 15:30:00 +0800
-description: ""
+description: "介绍如何在 Linux 下 Kate 文本编辑器中进行禅意编程。"
 tags: [Kate, KDE, Emmet, Zen Coding ]
 ---
 
