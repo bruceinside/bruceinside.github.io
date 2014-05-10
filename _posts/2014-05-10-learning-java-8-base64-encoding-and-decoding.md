@@ -26,8 +26,9 @@ Base64 编码之后的字符串只包含上述字符，是可以在网络上安�
 
 #### Java 8 中的 Base64 支持
 
-Java 8 新增了一个类（ `java.util.Base64` ）用于 Base64 编解码。我们通过例子来介绍如何使用它。    
-**对字符串进行 Base64 编码**
+Java 8 新增了一个类（ `java.util.Base64` ）用于 Base64 编解码。我们通过例子来介绍如何使用它。  
+
+##### 对字符串进行 Base64 编码
 
 下面是一个简单例子，演示了如何获取一个 `Base64.Encoder` 实例然后使用它来对字符串进行编码。
 
@@ -51,7 +52,7 @@ public class Base64InJava8 {
 }
 {% endhighlight %}
 
-**对字符串进行 Base64 解码**
+##### 对字符串进行 Base64 解码
 
 这也非常简单。你只需获取 `Base64.Decoder` 然后用它来对 Base64 字符串进行解码即可。
 
@@ -74,7 +75,7 @@ public class Base64InJava8 {
 }
 {% endhighlight %}
 
-**Base64 编码输出流**
+##### Base64 编码输出流
 
 如果你不想直接操作数据本身而是想操作输入输出流，你可以对输出流进行包装，这样所有写入该输出流的数据都会被自动进行 Base64 编码。
     
