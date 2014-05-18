@@ -43,7 +43,7 @@ smbclient -L 192.168.8.107 -U username%password
 
 {% highlight bash %}
 smbclient //192.168.8.107//sharedfolder -U username%password
-{% highlight %}
+{% endhighlight %}
 
 这样就会出现 `smb: \>` 提示符，进入到 smbclient 环境。 该环境下有许多的命令，比如 `cd`, `lcd`, `ls`, `put`, `get` 等，通过这些命令，我们可以访问远程主机的共享资源。如下图所示：
 ![smbclient access windows shared folders](http://suselinks-us.qiniudn.com/smbclient-access-windows-shared-folders.png)
