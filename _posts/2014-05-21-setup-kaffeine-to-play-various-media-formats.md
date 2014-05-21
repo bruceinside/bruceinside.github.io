@@ -16,7 +16,7 @@ tags: [linux, openSUSE, kaffeine, xine ]
 
 这其实不能怪 kaffeine，kaffeine 是基于 `libxine2` （ 其实就是 XINE 官方所说的 `xine-lib` ） 包的， openSUSE 的政策是[不收录受专利和版权保护的软件](http://en.opensuse.org/Restricted_formats)，所以 openSUSE 官方提供的 `libxine2` 缺少一些插件，因而像 rmvb, mkv, mp4, wmv, m4v, mov, 3gp, 3g2 等视频文件的编解码器，openSUSE 系统是不能默认安装的。但是，用户自己是可以的，毕竟，要对公司发起诉讼容易，但是对世界上的海量用户一一发起诉讼，那是比蜀道还难呀！
 
-那用户要怎么安装这些编解码器呢？ 我们先说安装 mkv, mp4, wmv, m4v, mov, 3gp, 3g2 等视频文件的编解码器，这些可以很方便的从 [packman](http://packman.links2linux.org/) 安装。核心的包是 `libxine2-codecs`。
+那用户要怎么安装这些编解码器呢？ 我们先说安装 mkv, mp4, wmv, m4v, mov, 3gp, 3g2 等视频文件的编解码器，这些可以很方便的从 [packman](http://packman.links2linux.org/) 安装。核心的包是 `libxine2-codecs`，我以 openSUSE 13.1 为例进行讲解：
 
 {% highlight bash %}
 sudo zypper ar -f http://packman.inode.at/suse/openSUSE_13.1/ packman
