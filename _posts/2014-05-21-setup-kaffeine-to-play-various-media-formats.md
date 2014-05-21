@@ -11,6 +11,7 @@ tags: [linux, openSUSE, kaffeine, xine ]
 不过话说回来，XINE 的功能并不弱，至少我在拖动视频播放进度条时，发现响应速度还是比 VLC 快的。
 
 使用 openSUSE 的用户在用 kaffeine 打开视频文件时，会发现 kaffeine 总是提示如下信息：
+
 ![kaffeine-prompt-to-install-extra-codecs.png](http://suselinks-us.qiniudn.com/kaffeine-prompt-to-install-extra-codecs.png)
 
 这其实不能怪 kaffeine，kaffeine 是基于 `libxine2` （ 其实就是 XINE 官方所说的 `xine-lib` ） 包的， openSUSE 的政策是[不收录受专利和版权保护的软件](http://en.opensuse.org/Restricted_formats)，所以 openSUSE 官方提供的 `libxine2` 缺少一些插件，因而像 rmvb, mkv, mp4, wmv, m4v, mov, 3gp, 3g2 等视频文件的编解码器，openSUSE 系统是不能默认安装的。但是，用户自己是可以的，毕竟，要对公司发起诉讼容易，但是对世界上的海量用户一一发起诉讼，那是比蜀道还难呀！
@@ -29,7 +30,7 @@ sudo zypper install libxine2-codecs
 sudo zypper install w32codec-all
 {% endhighlight %}
 
-安装完成之后呢，编辑下 `/home/bruce/.kde4/share/apps/kaffeine/xine-config` 文件， 把 `decoder.external.real_codecs_path` 配置的值修改为 `/usr/lib/win32`。 下面是示例配置。
+安装完成之后呢，编辑下 `~/.kde4/share/apps/kaffeine/xine-config` 文件， 把 `decoder.external.real_codecs_path` 配置的值修改为 `/usr/lib/win32`。 下面是示例配置:
 
 {% highlight bash %}
 # path to RealPlayer codecs
@@ -44,7 +45,7 @@ decoder.external.real_codecs_path:/usr/lib/win32
 
 这样你再启动 kaffeine 就可以播放 rmvb 文件啦～
 
-对于 64 位系统来说，步骤稍微复杂点，这是因为 packman 没有提供 `w64codec-all` 这个包导致的（怨念），需要我们手动从 mplayer 的官方站点下载。要下载的包是 [](http://www.mplayerhq.hu/MPlayer/releases/codecs/essential-amd64-20071007.tar.bz2)，下载完成之后，在 `/usr/lib64` 目录下建立 `win64` 目录，然后把 `essential-amd64-20071007.tar.bz2` 的内容解压到 `/usr/lib64/win64` 下。`/usr/lib64/win64` 目录结构如下：
+对于 64 位系统来说，步骤稍微复杂点，这是因为 packman 没有提供 `w64codec-all` 这个包导致的（怨念），需要我们手动从 mplayer 的官方站点下载。要下载的包是 [essential-amd64-20071007.tar.bz2](http://www.mplayerhq.hu/MPlayer/releases/codecs/essential-amd64-20071007.tar.bz2)，下载完成之后，在 `/usr/lib64` 目录下建立 `win64` 目录，然后把 `essential-amd64-20071007.tar.bz2` 的内容解压到 `/usr/lib64/win64` 下。`/usr/lib64/win64` 目录结构如下：
 
 {% highlight bash %}
 /usr/lib64/win64
@@ -54,7 +55,7 @@ decoder.external.real_codecs_path:/usr/lib/win32
 └── sipr.so
 {% endhighlight %}
 
-然后就是修改 `/home/bruce/.kde4/share/apps/kaffeine/xine-config` 文件：
+然后就是修改 `~/.kde4/share/apps/kaffeine/xine-config` 文件：
 
 {% highlight bash %}
 # path to RealPlayer codecs
@@ -62,5 +63,7 @@ decoder.external.real_codecs_path:/usr/lib/win32
 decoder.external.real_codecs_path:/usr/lib64/win64
 {% endhighlight %}
 
-顺带提一句， rmvb 文件的解码是由 `drvc.so` 文件提供的。
-至此为止，所有的视频格式都可以正常播放了。我用 [](http://support.apple.com/kb/HT1425) 页面提供的样本视频文件以及自己电脑上 RV40 编码的 rmvb 文件测试了一遍，全部正常!
+
+至此为止，所有的视频格式都可以正常播放了。我用 [http://support.apple.com/kb/HT1425](http://support.apple.com/kb/HT1425) 页面提供的样本视频文件以及自己电脑上 RV40 编码的 rmvb 文件测试了一遍，全部正常!
+
+顺带提一句， rmvb 文件的解码是由 `drvc.so` 文件提供的。而且尽管我这篇文章是用 openSUSE 为例进行讲解，但是实际上整体思路是和具体的 linux 发行版本无关的，是适用于所有 linux 发行版本的。
