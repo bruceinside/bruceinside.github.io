@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 调教 kaffeine 正确显示字幕
+title: 调教 kaffeine 正确显示中文字幕
 date: 2014-05-23 01:00:00 +0800
 description: "详细分析了 kaffeine 的字幕处理 （ 其实本质上是 XINE 的问题） 存在的缺陷，以及如何让 kaffeine 正确显示 GBK 编码的中文 srt 字幕。"
 tags: [linux, openSUSE, kaffeine, xine ]
 ---
 
 我们接着上篇文章《[调教 kaffeine 播放各类媒体格式]({% post_url 2014-05-21-setup-kaffeine-to-play-various-media-formats %})》，继续讲讲 kaffeine 的字幕问题。
-[kaffeine](http://www.kde.org/applications/multimedia/kaffeine/) 的字幕处理能力也不甚理想。其实我不想一开始就批评 kaffeine 这不好那不好， 这会让我的这篇博文变成批判大会，让我的博文偏离主题，可是我怎么就忍不住呢？ kaffeine 的字幕处理 （ 其实本质上是 XINE 的问题） 存在如下缺陷：
+[kaffeine](http://www.kde.org/applications/multimedia/kaffeine/) 的字幕处理能力不甚理想。其实我不想一开始就批评 kaffeine 这不好那不好， 这会让我的这篇博文变成批判大会，让我的博文偏离主题，可是我怎么就忍不住呢？ kaffeine 的字幕处理 （ 其实本质上是 XINE 的问题） 存在如下缺陷：
 
 0. 只支持 srt 格式的字幕，不支持 ass / ssa 格式的。
 0. 字幕不能使用系统字体，只能使用 XINE 自己的原生字体或者 TTF 字体。对于从 packman 中安装的 `libxine2` 包来说，自带的原生字体（ 在 `/usr/share/xine-lib/fonts/` 目录下 ）都不能正确显示中文，需要额外安装中文字体。
@@ -20,7 +20,7 @@ tags: [linux, openSUSE, kaffeine, xine ]
 
 ##### 安装 XINE 的中文原生字体
 
-hillwood 的 OBS 个人仓库中提供了两个 XINE 的中文原生字体包，分别是 `xine-font-wqymh` （文泉驿微米黑） 和 `xine-font-wqyzenhei` （文泉驿正黑），有点小遗憾的是只提供了 openSUSE 12.2 和 openSUSE 12.3 的，且只能用于 libxine1， 不过其实没有什么大的妨碍，因为字体文件其实与发行版本无关，我们大可以把需要的字体文件从 RPM 包中抽取出来，直接放到 XINE 的字体目录中。XINE 的字体在 `libxine2` 包中，路径是 `/usr/share/xine-lib/fonts/` ， 你可以通过 `rpm -ql libxine2` 看出来。我以`xine-font-wqymh` 为例，先下载 [xine-font-wqymh-0.9.41-3.1.noarch.rpm](http://download.opensuse.org/repositories/home:/hillwood/openSUSE_12.3/noarch/xine-font-wqymh-0.9.41-3.1.noarch.rpm) 包，然后把里面所有的 `xinefont.gz` 文件解压到 `/usr/share/xine-lib/fonts/` 下， 解压后的 `/usr/share/xine-lib/fonts/` 看起来应该是这样的：
+[hillwood 的 OBS 个人仓库](http://download.opensuse.org/repositories/home:/hillwood/)中提供了两个 XINE 的中文原生字体包，分别是 `xine-font-wqymh` （文泉驿微米黑） 和 `xine-font-wqyzenhei` （文泉驿正黑），有点小遗憾的是只提供了 openSUSE 12.2 和 openSUSE 12.3 的，且只能用于 libxine1， 不过其实没有什么大的妨碍，因为字体文件其实与发行版本无关，我们大可以把需要的字体文件从 RPM 包中抽取出来，直接放到 XINE 的字体目录中。XINE 的字体在 `libxine2` 包中，路径是 `/usr/share/xine-lib/fonts/` ， 你可以通过 `rpm -ql libxine2` 看出来。我以`xine-font-wqymh` 为例，先下载 [xine-font-wqymh-0.9.41-3.1.noarch.rpm](http://download.opensuse.org/repositories/home:/hillwood/openSUSE_12.3/noarch/xine-font-wqymh-0.9.41-3.1.noarch.rpm) 包，然后把里面所有的 `xinefont.gz` 文件解压到 `/usr/share/xine-lib/fonts/` 下， 解压后的 `/usr/share/xine-lib/fonts/` 看起来应该是这样的：
 
 {% highlight bash %}
 /usr/share/xine-lib/fonts/
@@ -55,11 +55,11 @@ subtitles.separate.src_encoding:GBK
 
 反正是你的字幕文件用什么编码，你就把这个配置项修改为对应编码的名称即可。最常见的中文字幕编码就两种： GBK 和 UTF-8。
 
-最后附上我的 kaffeine 截图，一飨读者：
+最后附上我的 kaffeine 截图，一飨读者：      
 ![kaffeine-with-gbk-chinese-subtitle-correctly-displayed.png](http://suselinks-us.qiniudn.com/kaffeine-with-gbk-chinese-subtitle-correctly-displayed.png)
 
-注：
-kaffeine 版本： 1.2.2
-libxine2 包版本: 1.2.5， 从 packman 安装的
+注：      
+kaffeine 版本： 1.2.2      
+libxine2 包版本: 1.2.5， 从 packman 安装的      
 
 
