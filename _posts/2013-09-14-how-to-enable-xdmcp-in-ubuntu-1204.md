@@ -19,17 +19,17 @@ enabled=true
 
 -   给root用户设置一个密码，激活root用户。在终端中执行：
 
-    ```bash 
+    {% highlight bash %} 
     sudo passwd root
-    ```
+    {% endhighlight %}
 
     输入当前用户密码，然后输入你要给root用户设置的密码。
 
--   运行命令 *sudo vi /etc/lightdm/lightdm.conf* ，在文件末尾添加：
+-   运行命令 `sudo vi /etc/lightdm/lightdm.conf` ，在文件末尾添加：
 
-    ```bash
+    {% highlight bash %}
     greeter-show-manual-login=true
-    ```
+    {% endhighlight %}
 
 现在重启系统，在登录界面，多了一个“登录”选项，你可以输入用户名和密码，到了这一步，你知道怎么做了吧 ^_^.
 
