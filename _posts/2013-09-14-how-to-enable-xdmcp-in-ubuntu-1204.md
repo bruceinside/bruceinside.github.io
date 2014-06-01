@@ -18,7 +18,6 @@ enabled=true
 但是光这么修改，还不能让 root 用户也能远程登录，你还得执行下述操作:
 
 -   给root用户设置一个密码，激活root用户。在终端中执行：
-
 {% highlight bash %} 
 sudo passwd root
 {% endhighlight %}
