@@ -6,7 +6,7 @@ tags: [linux, xdmcp, SUSE Linux Enterprise Server]
 ---
 
 0.  修改配置文件 */etc/sysconfig/displaymanager*
-{% highlight bash linenos hl_lines=10 21 30 %}
+{% highlight bash linenos hl_lines=10,21,30 %}
 ## Path:        Desktop/Display manager
 ## Description: settings to generate a proper displaymanager config
 
