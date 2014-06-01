@@ -8,7 +8,7 @@ tags: [linux, xdmcp, SUSE Linux Enterprise Server]
 
 
 
-1.  修改配置文件 */etc/sysconfig/displaymanager*
+#### 修改配置文件 */etc/sysconfig/displaymanager*
 
 {% highlight bash linenos %}
 ## Path:        Desktop/Display manager
@@ -43,7 +43,7 @@ DISPLAYMANAGER_REMOTE_ACCESS="yes"
 DISPLAYMANAGER_ROOT_LOGIN_REMOTE="yes"
 {% endhighlight %}
 
-2.  修改配置文件 */etc/gdm/custom.conf*
+####  修改配置文件 */etc/gdm/custom.conf*
 
 {% highlight bash linenos %}
 # GDM configuration storage
@@ -62,7 +62,7 @@ AllowRemoteRoot=true
 Enable=true
 {% endhighlight %}
 
-3.  重启 *gdm*
+####  重启 *gdm*
 
 {% highlight bash linenos %}
 /etc/init.d/xdm restart
