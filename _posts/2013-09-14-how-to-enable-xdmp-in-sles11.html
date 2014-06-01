@@ -42,7 +42,7 @@ DISPLAYMANAGER_ROOT_LOGIN_REMOTE="yes"
 
 </li>
 <li>修改配置文件 <em>/etc/gdm/custom.conf</em>
-
+{% highlight bash linenos %}
 # GDM configuration storage
 [xdmcp]
 # SuSEconfig: displaymanager:DISPLAYMANAGER_REMOTE_ACCESS
@@ -57,11 +57,11 @@ DisallowTCP=true
 AllowRemoteRoot=true
 [debug]
 Enable=true
-
+{% endhighlight %}
 </li>
 <li>重启 <em>gdm</em>
-
+{% highlight bash linenos %}
 /etc/init.d/xdm restart
-
+{% endhighlight %}
 </li>
 </ol>
