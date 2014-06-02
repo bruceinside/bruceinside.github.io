@@ -59,14 +59,14 @@ export QT_IM_MODULE=xim GTK_IM_MODULE=xim
 ##### 自定义短语
 
 在激活Fcitx输入法的情况下，按下分号键则进入快速输入模式。在这种模式下，可以快速输入用户自定义的常用短语或符号。
-为了使用该功能，您需要将常用短语和符号按如下格式编辑
-{% highlight %} 
+为了使用该功能，您需要将常用短语和符号按如下格式编辑:
+{% highlight bash %} 
 <字符组合> <短语>
 {% endhighlight %}
 
-并保存为文件 `~/.config/fcitx/data/QuickPhrase.mb`（或把文件放在fcitx的安装目录下的 share/data），一个短语一行。如
+并保存为文件 `~/.config/fcitx/data/QuickPhrase.mb`（或把文件放在fcitx的安装目录下的 share/data），一个短语一行。如:
 
-{% highlight %} 
+{% highlight bash %} 
 zg 中华人民共和国
 h http
 {% endhighlight %}
