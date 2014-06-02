@@ -15,25 +15,20 @@ tags: [linux, AdvanceMAME]
 
 ##### 初始化 AdvanceMAME
 
-在终端运行一次 advmame ,即可完成 AdvanceMAME
-的初始化工作，具体来说就是使用缺省选项创建了 AdvanceMAME 的配置文件 `~/.advance/advmame.rc`
+在终端运行一次 `advmame` ,即可完成 AdvanceMAME 的初始化工作，具体来说就是使用缺省选项创建了 AdvanceMAME 的配置文件 `~/.advance/advmame.rc`
 
 ##### 下载ROM以及对应的BIOS
 
 在 [http://www.rom-world.com](http://www.rom-world.com/) 网站上收藏了大量适合于MAME模拟器的ROM文件以及BIOS文件。当然如果有需要，大家也可以直接找我索要相关ROM和BIOS。
 以三国战记119版本为例，总共需要下载下述三个文件：
-
 {% highlight bash %} 
 kovplus.zip
 kov.zip
 pgm.zip
 {% endhighlight %}
 
-其中的 pgm.zip 就是 Poly Game Master的BIOS文件。
-
-
+其中的 pgm.zip 就是 Poly Game Master的BIOS文件。    
 再以KOF98为例，总共需要下载下述2个文件：
-
 {% highlight bash %} 
 kof98.zip
 neogeo.zip
@@ -43,25 +38,23 @@ neogeo.zip
 
 ##### ROM和BIOS放到哪里去？
 
-下载下来的ROM和BIOS文件，需要放到特定目录夹下，AdvanceMAME 才找得到。默认情况下 AdvanceMAME 会依次到 `～/.advance/rom` 和 `/usr/share/advance/rom` 查找 ROM， 当然，我们也可以修改`~/.advance/advmame.rc` 配置文件，使用 'dir_rom' 选项 让 AdvanceMAME 查找其它目录。例如我让 AdvanceMAME 优先查找了 `/mnt/F/Software/game/mame/rom` 目录。
+下载下来的ROM和BIOS文件，需要放到特定目录夹下，AdvanceMAME 才找得到。默认情况下 AdvanceMAME 会依次到 `～/.advance/rom` 和 `/usr/share/advance/rom` 查找 ROM， 当然，我们也可以修改`~/.advance/advmame.rc` 配置文件，使用 *dir_rom* 选项 让 AdvanceMAME 查找其它目录。例如我让 AdvanceMAME 优先查找了 `/mnt/F/Software/game/mame/rom` 目录。
 
 {% highlight bash %} 
 dir_rom /mnt/F/Software/game/mame/rom:/home/bruce/.advance/rom:/usr/share/advance/rom
 {% endhighlight %}
 
-注1：冒号（:）是目录分隔符。 
+注1：冒号（:）是目录分隔符。     
 注2：直接把zip包放到rom目录下即可，无需解压。
 
 ##### 全屏启动游戏
 
 在终端运行
-
 {% highlight bash %} 
 advmame 游戏名称
 {% endhighlight %}
 
 AdvanceMAME 支持的所有游戏可以通过 `advmame --listxml` 来查看，但是一般情况下，游戏名称就是zip包的名称，以三国战记为例，你只需运行 `advmame kovplus` 即可启动三国战记了。启动后会出来一个白底黑字的界面，显示：
-
 {% highlight bash %} 
 省略若干文字......
 Otherwise, type OK or move the joystick left then right to continue.
