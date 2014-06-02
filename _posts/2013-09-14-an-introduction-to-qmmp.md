@@ -5,14 +5,7 @@ description: ""
 tags: [Linux, Qmmp]
 ---
 
-<style type="text/css"><!--
-.thumbnail {
-            width:10%;height:10%
-        }
-        .highlight {
-            color:red
-        }
---></style>
+
 Qmmp 是一款音乐播放器，采用QT语言编写，用户界面和 winamp,xmms 类似，类 Amarok 和类 foolbar 的用户界面也在开发中。
 
 ##### 支持的操作系统：
