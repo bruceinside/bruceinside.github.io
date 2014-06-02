@@ -8,12 +8,14 @@ tags: [linux, mint 13,]
 
 ##### 打开网络连接
 安装完linux mint 13之后，我第一件想做的事情就是联网安装“装机必备”软件（比如 google chrome 和 smplayer）。可令我感到沮丧的是，在系统设置 -> 网络里面，我竟然无法添加 DSL/PPPoE 拨号链接！费了老大劲才在 *preferences-> 网络连接* 里找到。要打开网络连接，有三种途径：
--   点击左下角菜单 -> preferences -> 网络连接
--   按windows键 -> 直接键入 connect -> 点击回车键就可打开网络连接
--   直接在终端中输入命令 `nm-connection-editor`
+
+- 点击左下角菜单 -> preferences -> 网络连接
+- 按windows键 -> 直接键入 connect -> 点击回车键就可打开网络连接
+- 直接在终端中输入命令 `nm-connection-editor`
 
 #### 修改软件源
 修改软件源为ubuntu网易镜像(具体使用那个ubuntu国内源得看你的实际情况)。由于linux mint的软件源里自带的中国镜像是教育网的，而我的拨号宽带是中国电信，这促使我萌生了换软件源的想法。linux mint安装软件时很多软件包都是直接从ubuntu的仓库获取的，既然这样，那我把apt配置文件中的ubuntu仓库替换成ubuntu网易镜像即可。
+
 -  在终端中运行下述命令，打开apt软件源配置文件：
 {% highlight bash %} 
 cd /etc/apt/
