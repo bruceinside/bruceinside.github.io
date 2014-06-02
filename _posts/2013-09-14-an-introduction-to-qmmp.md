@@ -120,12 +120,12 @@ qmmp设置 → 外观 → 皮肤 → 添加 →
 此外，我收集了许多个人觉得好看的皮肤，先分享几款给大家。
 
 
-| 名称(点击名称可以预览) | 下载地址 
+| 预览 | 下载地址 
 |:-----:| :-----:
-| [![AlmostWinamp31-0](http://i.imgur.com/h9wFs.png "AlmostWinamp31-0")](http://imgur.com/h9wFs.png)  | [点此下载](http://dl.vmall.com/c09hhsbjb1)
-| [![ECNMY_SEO](http://i.imgur.com/7BoJk.png "ECNMY_SEO")](http://imgur.com/7BoJk.png)         | [点此下载](http://dl.vmall.com/c0zoozwuxd) 
-| [![parasiticdecoy1-0](http://i.imgur.com/HVRoy.png "parasiticdecoy1-0")](http://imgur.com/HVRoy.png) | [点此下载](http://dl.vmall.com/c0ltpwprle) 
-| [![sandwich.brown](http://i.imgur.com/WnMQ1.png "sandwich.brown")](http://imgur.com/WnMQ1.png)    | [点此下载](http://dl.vmall.com/c0v9j6ab41) 
+| [![](http://i.imgur.com/h9wFs.png "AlmostWinamp31-0")](http://imgur.com/h9wFs.png)  | [点此下载](http://dl.vmall.com/c09hhsbjb1)
+| [![](http://i.imgur.com/7BoJk.png "ECNMY_SEO")](http://imgur.com/7BoJk.png)         | [点此下载](http://dl.vmall.com/c0zoozwuxd) 
+| [![](http://i.imgur.com/HVRoy.png "parasiticdecoy1-0")](http://imgur.com/HVRoy.png) | [点此下载](http://dl.vmall.com/c0ltpwprle) 
+| [![](http://i.imgur.com/WnMQ1.png "sandwich.brown")](http://imgur.com/WnMQ1.png)    | [点此下载](http://dl.vmall.com/c0v9j6ab41) 
 
 
 
