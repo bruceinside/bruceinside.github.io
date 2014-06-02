@@ -10,7 +10,7 @@ tags: [linux, AdvanceMAME]
 
 ##### 安装 AdvanceMAME（仅提供了openSUSE的安装方法）
 
-打开链接 [在 software.opensuse.org 中搜索 advancemame](http://software.opensuse.org/package/advancemame?search_term=advancemame)，根据实际情况选择 openSUSE 版本然后点击 1 Click Install，然后会弹出Yast2一键安装窗口，之后基本都是直接点击 next 了。
+打开链接 [在 software.opensuse.org 中搜索 advancemame](http://software.opensuse.org/package/advancemame?search_term=advancemame)，根据实际情况选择 openSUSE 版本然后点击 1 Click Install，然后会弹出Yast2一键安装窗口，之后基本都是直接点击 next 了。    
 注：有的浏览器会显示 `advancemame.ymp` 的内容而不是自动弹出Yast2一键安装窗口，这时需要你右键另存为 `advancemame.ymp` ，然后双击 `advancemame.ymp` 来启动Yast2一键安装工具。
 
 ##### 初始化 AdvanceMAME
