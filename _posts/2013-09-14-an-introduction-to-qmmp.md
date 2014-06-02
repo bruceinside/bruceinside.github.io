@@ -98,25 +98,12 @@ sudo zypper in qmmp
 
 在qmmp设置 → 插件 → 选中CUE插件 → 参数设置中，包含一些CUE相关的设置项
 
-设置项名称
-
-含义解释
-
-自动文件检测
-
-如果勾选，则在打开CUE文件时，qmmp会自动关联同名的APE文件，这样就可以在APE文件里的曲目间进行切换了。如果不勾选，则即使打开CUE文件，qmmp的播放列表也会是空的
-
-自动检测字符集
-
-如果勾选，则不管CUE文件采用什么编码，qmmp都能识别，播放列表不再乱码
-
-语言
-
-中文用户，请选择zh
-
-默认编码
-
-中文用户建议选择GB18030,这样即使自动检测字符集失败，一般情况下也不会乱码
+| 设置项名称 | 含义解释
+| ----- | -----
+| 自动文件检测 | 如果勾选，则在打开CUE文件时，qmmp会自动关联同名的APE文件，这样就可以在APE文件里的曲目间进行切换了。如果不勾选，则即使打开CUE文件，qmmp的播放列表也会是空的
+| 自动检测字符集 | 如果勾选，则不管CUE文件采用什么编码，qmmp都能识别，播放列表不再乱码
+| 语言 | 中文用户，请选择zh
+| 默认编码 | 中文用户建议选择GB18030,这样即使自动检测字符集失败，一般情况下也不会乱码
 
 ##### 用winamp 2.x皮肤装扮qmmp：
 
@@ -125,14 +112,13 @@ qmmp设置 → 外观 → 皮肤 → 添加 →
 
 此外，我收集了许多个人觉得好看的皮肤，先分享几款给大家。
 
-| 名称 | 预览 | 下载地址 |
-| :------------: |:---------------:| :-----:|
 
-| AlmostWinamp31-0 | [![](http://i.imgur.com/h9wFs.png "AlmostWinamp31-0")](http://imgur.com/h9wFs.png) |[点此下载](http://dl.vmall.com/c09hhsbjb1)|
+| 名称 | 预览 | 下载地址 
+| :-----: |:-----:| :-----:
+| AlmostWinamp31-0  | [![](http://i.imgur.com/h9wFs.png "AlmostWinamp31-0")](http://imgur.com/h9wFs.png)  | [点此下载](http://dl.vmall.com/c09hhsbjb1)
+| ECNMY_SEO         | [![](http://i.imgur.com/7BoJk.png "ECNMY_SEO")](http://imgur.com/7BoJk.png)         | [点此下载](http://dl.vmall.com/c0zoozwuxd) 
+| parasiticdecoy1-0 | [![](http://i.imgur.com/HVRoy.png "parasiticdecoy1-0")](http://imgur.com/HVRoy.png) | [点此下载](http://dl.vmall.com/c0ltpwprle) 
+| sandwich.brown    | [![](http://i.imgur.com/WnMQ1.png "sandwich.brown")](http://imgur.com/WnMQ1.png)    | [点此下载](http://dl.vmall.com/c0v9j6ab41) 
 
-| ECNMY_SEO | [![](http://i.imgur.com/7BoJk.png "ECNMY_SEO")](http://imgur.com/7BoJk.png) | [点此下载](http://dl.vmall.com/c0zoozwuxd) |
 
-| parasiticdecoy1-0 | [![](http://i.imgur.com/HVRoy.png "parasiticdecoy1-0")](http://imgur.com/HVRoy.png) | [点此下载](http://dl.vmall.com/c0ltpwprle) |
-
-| sandwich.brown | [![](http://i.imgur.com/WnMQ1.png "sandwich.brown")](http://imgur.com/WnMQ1.png) | [点此下载](http://dl.vmall.com/c0v9j6ab41) |
 
