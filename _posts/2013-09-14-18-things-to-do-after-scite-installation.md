@@ -31,7 +31,7 @@ font.vbs=$(default.font.name),size:9
 
 ##### 修改打开文件窗口的文件过滤器为“全部文件”
 
-~~~sh
+~~~
 if PLAT_WIN
     all.files=All Files (*.*)|*.*|
     top.filters=$(all.files)|All Source
@@ -42,6 +42,7 @@ if PLAT_MAC
     all.files=All Files (*.*)|*.*|
     top.filters=$(all.files)All Source
 ~~~
+{:.bash}
 
 ##### 打开SciTE时默认全屏
 
