@@ -1,0 +1,51 @@
+---
+layout: post
+title: IBUS拼音输入法高级指南
+description: ""
+tags: [linux,ibus]
+---
+
+
+
+<h5>如何打开IBUS拼音输入法首选项？</h5>
+<p>在终端运行下述命令即可打开首选项窗口：</p>
+
+{% highlight bash %}
+/usr/lib/ibus-pinyin/ibus-setup-pinyin
+{% endhighlight %}
+<h5>如何修改水平候选词条为垂直候选词条？</h5>
+<p>打开首选项窗口 &rarr; preferences &rarr; general &rarr; orientation of candidate，选择vertical即可。</p>
+<h5>在IBUS输入法中如何输入繁体字？</h5>
+<p>打开首选项窗口 &rarr; preferences -&gt; general -chinese，选择traditional。该设置需要注销并重新登入。</p>
+<h5>IBUS拼音输入法如何修改候选词翻页快捷键？</h5>
+<p>ibus-pinyin默认的翻页快捷键是 pageup,pagedown。</p>
+<p>打开首选项窗口 &rarr; preferences &rarr; pinyin mode &rarr; input custom，根据需要选择即可。具体含义如下：</p>
+<ul>
+<li>[-][=] flip page，允许按-=进行翻页</li>
+<li>[,][.] flip page，允许按,.进行翻页</li>
+</ul>
+<h5>ibus拼音输入法如何增加&ldquo;候选词显示数&rdquo;？</h5>
+<p>打开首选项窗口 &rarr; preferences &rarr; general &rarr; number of candicates</p>
+<h5>ibus拼音输入法如何输入左箭头？</h5>
+<p>在搜狗输入法中，输入zjt就可以快速输入左键头符号。IBUS输入法默认没有提供该功能。但是我们可以通过自定义短语来实现。通过自定义短语，还可以实现快速输入右箭头、上箭头、下箭头等。</p>
+<ol>
+<li>打开 附件 &rarr; 字符映射表 ，选择 菜单 &rarr; 搜索 &rarr; 查找，在搜索输入框中输入 &ldquo;leftwards arrow&rdquo;并进行搜索。然后双击左箭头符号，它会出现在窗口下方要复制的文本输入框中，然后点击输入框右边的复制按钮。</li>
+<li>打开IBUS输入法首选项窗口 &rarr; preferences &rarr; dictionary &rarr; edit custom phrases。在打开的phrases.txt文件的末尾输入 zjt=，然后按 ctrl+v，就把字符映射表中复制的符号粘贴过来了。</li>
+<li>注销并重新登入</li>
+</ol>
+<h5>i模式</h5>
+<p>IBUS拼音输入法处于中文模式时，直接键入字母i即可进入i模式</p>
+<p>i模式下可以进行下述特殊输入功能</p>
+<ul>
+<li>gz.打印稿纸</li>
+<li>hh.画画</li>
+<li>js.计算模式</li>
+<li>rq.输入日期</li>
+<li>sj.输入时间</li>
+<li>sz.掷骰子</li>
+<li>xz.查询星座</li>
+<li>zf.打印字符</li>
+</ul>
+<p>在这里我不得不吐槽下i模式。i模式下的多数功能都是鸡肋！比如打印稿纸，画出来的图到底是什么意思？用户在什么场景下会使用该功能？我愣是没有想出来！再说画画功能。该功能本是一个及其值得期待的功能，搜狗输入法中的字符画让我爱不释手，可是ibus的画画功能就只能说聊胜于无了，默认提供的字符画没创意还让人看不懂。i模式下我唯一觉得有实用价值的就是查询星座了。输入ixz就可以查询任意具体一天对应的星座，比如ixz2011-01-27</p>
+<h5>v模式</h5>
+<p>IBUS拼音输入法处于中文模式时，直接键入字母v可以临时进入英文输入模式。在这个临时的英文输入模式里，按空格键确认输入并返回中文输入模式，按ESC返回中文模式。v模式避免了用户频繁切换输入模式，能显著提升输入速度。</p>
