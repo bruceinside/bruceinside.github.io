@@ -12,7 +12,7 @@ tags: [linux, ubuntu, SciTE]
 
 1.  ##### 修改所有的字体为微软雅黑，如果希望修改为其它字体，只需要修改 *default.font.name* 即可
 
-~~~ shell
+~~~ sh
 default.font.name=font:!Microsoft YaHei
 font.base=$(default.font.name),size:11
 font.small=$(default.font.name),size:10
@@ -28,8 +28,6 @@ font.embedded.comment=$(default.font.name),size:9
 font.monospace=$(default.font.name),size:11
 font.vbs=$(default.font.name),size:9  
 ~~~
-
-
 2.  ##### 修改打开文件窗口的文件过滤器为“全部文件”
 
     ```sh
