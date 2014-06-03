@@ -11,7 +11,7 @@ tags: [linux, ubuntu, SciTE]
 下文中自动检测文件编码的相关配置项，需要使用到 *FileDetect.py* 文件，可以点击[这里](http://ubuntudaily.googlecode.com/files/FileDetect.py)，放置到家目录下即可。
 
 1.  ##### 修改所有的字体为微软雅黑，如果希望修改为其它字体，只需要修改 *default.font.name* 即可
-    ```bash
+    ```Shell
     # 注意，linux系统中默认是没有微软雅黑字体的，你可能需要从网络上下载，或者直接从windows操作系统中获取。
     default.font.name=font:!Microsoft YaHei
     font.base=$(default.font.name),size:11
@@ -30,7 +30,7 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 2.  ##### 修改打开文件窗口的文件过滤器为“全部文件”
-    ```bash
+    ```Shell
     if PLAT_WIN
         all.files=All Files (*.*)|*.*|
         top.filters=$(all.files)|All Source
@@ -43,32 +43,32 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 3.  ##### 打开SciTE时默认全屏
-    ```bash
+    ```Shell
     position.maximize=1
     ```
 
 4.  ##### 默认显示工具条
-    ```bash
+    ```Shell
     toolbar.visible=1
     ```
 
 5.  ##### 让scite工具条使用gnome当前主题提供的图标
-    ```bash
+    ```Shell
     toolbar.usestockicons=1
     ```
 
 6.  ##### 默认显示状态栏
-    ```bash
+    ```Shell
     statusbar.visible=1
     ```
 
 7.  ##### 在窗口标题栏显示当前文件的全路径文件名称
-    ```bash
+    ```Shell
     title.full.path=1
     ```
 
 8.  ##### 默认显示行号
-    ```bash
+    ```Shell
     # 默认显示行号
     line.margin.visible=1
     # 行号至少占用的宽度
@@ -76,7 +76,7 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 9.  ##### 高亮当前选中的单词
-    ```bash
+    ```Shell
     # 高亮当前选中的单词
     highlight.current.word=1
     # 设置高亮单词的颜色
@@ -84,7 +84,7 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 10. ##### 自动重新载入
-    ```bash
+    ```Shell
     # 当前文件被外部程序修改时自动载入
     load.on.activate=1
     # 自动重新载入前询问
@@ -92,22 +92,22 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 11. ##### 在已运行的SciTE中打开新文件，亦即只允许运行一个SciTE实例
-    ```bash
+    ```Shell
     check.if.already.open=1
     ```
 
 12. ##### 保存最近打开的文件列表
-    ```bash
+    ```Shell
     save.recent=1
     ```
 
 13. ##### 打开SciTE时自动打开上次退出时没有关闭的所有文件
-    ```bash
+    ```Shell
     save.session=1
     ```
 
 14. ##### 使用空格替换tab
-    ```bash
+    ```Shell
     # 设置tab size 为 4个空格的大小
     tabsize=4
     # 设置缩进的大小为4个空格的大小，可以和tabsize不同
@@ -117,7 +117,7 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 15. ##### 自动换行
-    ```bash
+    ```Shell
     # 打开编辑窗格自动换行
     wrap=1
     # 按字进行换行（更适合亚洲语言）。如果设置为1则是按单词进行换行。
@@ -127,17 +127,17 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 16. ##### 开启单词自动补全
-    ```bash
+    ```Shell
     autocompleteword.automatic=1
     ```
 
 17. ##### 打开文件时自动检测编码
-    ```bash
+    ```Shell
     # 注：FileDetect.py文件可以通过点击本文开头的相关链接下载
     command.discover.properties=python ~/FileDetect.py "$(FilePath)"
     ```
 
 18. ##### xml、html自动闭合括号
-    ```bash
+    ```Shell
     xml.auto.close.tags=1
     ```
