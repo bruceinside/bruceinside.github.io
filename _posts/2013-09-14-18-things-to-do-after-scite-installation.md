@@ -11,6 +11,7 @@ tags: [linux, ubuntu, SciTE]
 下文中自动检测文件编码的相关配置项，需要使用到 *FileDetect.py* 文件，可以点击[这里](http://ubuntudaily.googlecode.com/files/FileDetect.py)，放置到家目录下即可。
 
 1.  ##### 修改所有的字体为微软雅黑，如果希望修改为其它字体，只需要修改 *default.font.name* 即可
+
     ```Shell
     # 注意，linux系统中默认是没有微软雅黑字体的，你可能需要从网络上下载，或者直接从windows操作系统中获取。
     default.font.name=font:!Microsoft YaHei
@@ -30,6 +31,7 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 2.  ##### 修改打开文件窗口的文件过滤器为“全部文件”
+
     ```Shell
     if PLAT_WIN
         all.files=All Files (*.*)|*.*|
@@ -43,11 +45,13 @@ tags: [linux, ubuntu, SciTE]
     ```
 
 3.  ##### 打开SciTE时默认全屏
+
     ```Shell
     position.maximize=1
     ```
 
 4.  ##### 默认显示工具条
+
     ```Shell
     toolbar.visible=1
     ```
