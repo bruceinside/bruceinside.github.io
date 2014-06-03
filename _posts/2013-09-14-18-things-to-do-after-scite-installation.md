@@ -13,7 +13,6 @@ tags: [linux, ubuntu, SciTE]
 1.  ##### 修改所有的字体为微软雅黑，如果希望修改为其它字体，只需要修改 *default.font.name* 即可
 
 ```
-\# 注意，linux系统中默认是没有微软雅黑字体的，你可能需要从网络上下载，或者直接从windows操作系统中获取。
 default.font.name=font:!Microsoft YaHei
 font.base=$(default.font.name),size:11
 font.small=$(default.font.name),size:10
