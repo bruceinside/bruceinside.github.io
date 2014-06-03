@@ -31,7 +31,7 @@ font.vbs=$(default.font.name),size:9
 
 ##### 修改打开文件窗口的文件过滤器为“全部文件”
 
-~~~
+{% highlight bash linenos %}
 if PLAT_WIN
     all.files=All Files (*.*)|*.*|
     top.filters=$(all.files)|All Source
@@ -41,107 +41,106 @@ if PLAT_GTK
 if PLAT_MAC
     all.files=All Files (*.*)|*.*|
     top.filters=$(all.files)All Source
-~~~
-{:.bash}
+{% endhighlight %}
 
 ##### 打开SciTE时默认全屏
 
-    ~~~Shell
+    {% highlight bash %}
     position.maximize=1
-    ~~~
+    {% endhighlight %}
 
 ##### 默认显示工具条
 
-    ~~~Shell
+    {% highlight bash %}
     toolbar.visible=1
-    ~~~
+    {% endhighlight %}
 
 ##### 让scite工具条使用gnome当前主题提供的图标
-    ~~~Shell
+    {% highlight bash %}
     toolbar.usestockicons=1
-    ~~~
+    {% endhighlight %}
 
 ##### 默认显示状态栏
-    ~~~Shell
+    {% highlight bash %}
     statusbar.visible=1
-    ~~~
+    {% endhighlight %}
 
 ##### 在窗口标题栏显示当前文件的全路径文件名称
-    ~~~Shell
+    {% highlight bash %}
     title.full.path=1
-    ~~~
+    {% endhighlight %}
 
 ##### 默认显示行号
-    ~~~Shell
+    {% highlight bash %}
     # 默认显示行号
     line.margin.visible=1
     # 行号至少占用的宽度
     line.margin.width=2+
-    ~~~
+    {% endhighlight %}
 
 ##### 高亮当前选中的单词
-    ~~~Shell
+    {% highlight bash %}
     # 高亮当前选中的单词
     highlight.current.word=1
     # 设置高亮单词的颜色
     highlight.current.word.colour=#FF0000
-    ~~~
+    {% endhighlight %}
 
 ##### 自动重新载入
-    ~~~Shell
+    {% highlight bash %}
     # 当前文件被外部程序修改时自动载入
     load.on.activate=1
     # 自动重新载入前询问
     are.you.sure.on.reload=1
-    ~~~
+    {% endhighlight %}
 
 ##### 在已运行的SciTE中打开新文件，亦即只允许运行一个SciTE实例
-    ~~~Shell
+    {% highlight bash %}
     check.if.already.open=1
-    ~~~
+    {% endhighlight %}
 
 ##### 保存最近打开的文件列表
-    ~~~Shell
+    {% highlight bash %}
     save.recent=1
-    ~~~
+    {% endhighlight %}
 
 ##### 打开SciTE时自动打开上次退出时没有关闭的所有文件
-    ~~~Shell
+    {% highlight bash %}
     save.session=1
-    ~~~
+    {% endhighlight %}
 
 ##### 使用空格替换tab
-    ~~~Shell
+    {% highlight bash %}
     # 设置tab size 为 4个空格的大小
     tabsize=4
     # 设置缩进的大小为4个空格的大小，可以和tabsize不同
     indent.size=4
     #缩进时使用空格代替tab，如果设置为1则是空格和tab混合。
     use.tabs=0
-    ~~~
+    {% endhighlight %}
 
 ##### 自动换行
-    ~~~Shell
+    {% highlight bash %}
     # 打开编辑窗格自动换行
     wrap=1
     # 按字进行换行（更适合亚洲语言）。如果设置为1则是按单词进行换行。
     wrap.style=2
     # 打开输出窗格自动换行
     output.wrap=1
-    ~~~
+    {% endhighlight %}
 
 ##### 开启单词自动补全
-    ~~~Shell
+    {% highlight bash %}
     autocompleteword.automatic=1
-    ~~~
+    {% endhighlight %}
 
 ##### 打开文件时自动检测编码
-    ~~~Shell
+    {% highlight bash %}
     # 注：FileDetect.py文件可以通过点击本文开头的相关链接下载
     command.discover.properties=python ~/FileDetect.py "$(FilePath)"
-    ~~~
+    {% endhighlight %}
 
 ##### xml、html自动闭合括号
-    ~~~Shell
+    {% highlight bash %}
     xml.auto.close.tags=1
-    ~~~
+    {% endhighlight %}
