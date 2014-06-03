@@ -3,7 +3,7 @@ layout: post
 title: 学习 Java 8 - Base64 编解码
 date: 2014-05-10 13:30:00 +0800
 description: "通过代码举例，使用 Java 8 新增的 java.util.Base64 类进行 Base64 编解码。"
-tags: [Java, Java 8, Base64, Encoding, Decoding]
+tags: [Java, Java 8, Base64]
 ---
 
     
