@@ -11,7 +11,6 @@ tags: [linux, ubuntu, SciTE]
 下文中自动检测文件编码的相关配置项，需要使用到 *FileDetect.py* 文件，可以点击[这里](http://ubuntudaily.googlecode.com/files/FileDetect.py)，放置到家目录下即可。
 
 1.  ##### 修改所有的字体为微软雅黑，如果希望修改为其它字体，只需要修改 *default.font.name* 即可
-
 ~~~ sh
 default.font.name=font:!Microsoft YaHei
 font.base=$(default.font.name),size:11
