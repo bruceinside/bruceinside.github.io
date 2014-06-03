@@ -4,11 +4,8 @@ title: 在 KDE 中使用 Windows 键来打开应用程序启动器
 description: "本文指导你实现：如何在 KDE 桌面环境中直接按 Win 键就可以打开开始菜单（应用程序启动器），并对实现原理进行了分析。"
 modified: 2014-04-05
 tags: [KDE,ksuperkey, openSUSE]
-image:
-  feature: texture-feature-05.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
 ---
+
 
 <h5>令人头痛的问题</h5>
 <p>从 Windows 系统转移过来的用户总是习惯于按 Windows 键来打开开始菜单（在 KDE 下叫应用程序起动器）。Windows 键在 Linux 下被称为 Super 键，它被当成是修饰键（或者说辅助键），和 Ctrl 还有 Shift 键类似。所谓修饰键，顾名思义，就是当按下时会修改其它键的行为，举例来说，如果你在按下 A 键时同时按下 Shift 键，则 a 变成了 A。 一个常见的想法是：如果用 xmodmap 把 Super 键映射到其它快捷键上，那是否能解决我们的问题呢？ 回答是能，但是同时带来了其它问题。重新映射后，当按下 Super 键时，确实会调用重新映射的快捷键，但是与此同时， Super 键再也不能作为修饰键来使用了，对于像我这样严重依赖 Super 键的人来说（我使用它来启动和控制应用程序），失去多个组合键的代价，委实得不偿失。</p>
