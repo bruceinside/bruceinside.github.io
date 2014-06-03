@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在ubuntu 12.04 中安装SciTE 文本编辑器
+title: 在ubuntu 12.04 中安装 SciTE 文本编辑器
 description: ""
 tags: [ubuntu, SciTE]
 ---
