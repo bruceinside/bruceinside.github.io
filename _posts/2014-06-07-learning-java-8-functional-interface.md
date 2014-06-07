@@ -11,8 +11,7 @@ Java 8 引入了函数式接口的概念。函数式接口其实就是只包含�
 
 ##### 如何定义函数式接口
 
-函数式接口可以包含一个拥有任意个参数的方法，函数式接口需要用 `@FunctionalInterface` 来注解。通过这个注解我们可以确保函数式接口只包含一个抽象接口。如果试图添加更多的抽象接口，则会报编译期错误 `Unexpected @FunctionalInterface annotation` 。主要指出的是，函数式接口是可以包含任意数量的缺省方法（ default method ）和静态方法的。
-
+函数式接口可以包含一个拥有任意个参数的方法，函数式接口需要用 `@FunctionalInterface` 来注解。通过这个注解我们可以确保函数式接口只包含一个抽象方法。如果试图添加更多的抽象方法，则会报编译期错误 `Unexpected @FunctionalInterface annotation` 。主要指出的是，函数式接口是还可以包含任意数量的缺省方法（ default method ）和静态方法的。    
 没有任何参数的函数式接口    
 **Display.java**
 {% highlight java linenos %}
@@ -26,7 +25,7 @@ public interface Display {
 {% endhighlight %}
 
 
-包含一个参数的函数式接口 
+包含一个参数的函数式接口     
 **Circle.java**
 {% highlight java linenos %}
 package us.suselinks.learningjava8;
@@ -37,7 +36,7 @@ public interface Circle {
     double area(double radius);
 }
 {% endhighlight %}
-包含两个参数的函数式接口
+包含两个参数的函数式接口    
 **Adder.java**
 {% highlight java linenos %}
 package us.suselinks.learningjava8;
@@ -51,8 +50,7 @@ public interface Adder {
 
 ##### 如何使用函数式接口 
 
-现在我们看看如何结合 lambda 表达式来使用函数式接口。下面的示例会实现上面定义的函数式接口。要运行下面的示例，我使用了 JDK8 和 Eclipse Luna 。
-
+现在我们看看如何结合 lambda 表达式来使用函数式接口。下面的示例会实现上面定义的函数式接口。要运行下面的示例，我使用了 JDK8 和 Eclipse Luna 。    
 **FunctionalInterfaceDemo.java**
 {% highlight java linenos %}
 package FunctionalInterfaceDemo;
