@@ -3,7 +3,7 @@ layout: post
 title: Axis2 Web服务配置文件services.xml详解
 date: 2013-09-14 01:00:00 +0800
 description: ""
-tags: [Axis2,Web Service]
+tags: [Axis2, Web Service]
 ---
 
 
