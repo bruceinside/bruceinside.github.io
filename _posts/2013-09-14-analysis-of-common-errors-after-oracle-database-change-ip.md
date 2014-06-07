@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Oracle 数据库服务器更换IP地址后常见错误分析和处理方法
-date: 2013-096-14 01:00:00 +0800
+date: 2013-09-14 01:00:00 +0800
 description: ""
 tags: [Oracle Database ]
 ---
