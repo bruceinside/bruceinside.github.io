@@ -2,7 +2,7 @@
 layout: post
 title: 学习 Java 8 - 函数式接口
 date: 2014-06-07 22:00:00 +0800
-description: ""
+description: "介绍了如何定义函数式接口和使用函数式接口。"
 tags: [Java, Java 8 ]
 ---
 
