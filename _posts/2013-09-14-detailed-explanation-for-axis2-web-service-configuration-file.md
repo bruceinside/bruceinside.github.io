@@ -27,7 +27,7 @@ tags: [Axis2,Web Service]
 
 ##### 服务名
 
-    我们用服务包部署单个服务时，如果我们没有给service节点指定name属性，那么服务包文件名称就是服务名称。例如假设服务包文件名是foo.aar，那么服务名就是foo。我们也可以给service节点添加name属性来指定不同的服务名称。如下所述：
+我们用服务包部署单个服务时，如果我们没有给service节点指定name属性，那么服务包文件名称就是服务名称。例如假设服务包文件名是foo.aar，那么服务名就是foo。我们也可以给service节点添加name属性来指定不同的服务名称。如下所述：
 
 {% highlight xml %}
 <service name="foo">
@@ -37,8 +37,7 @@ tags: [Axis2,Web Service]
 
 ##### 服务描述
 
-    服务编写者可以使用description元素来描述该服务。在Axis2
-Web管理控制台中查看服务时，我们只能看到服务名和服务描述。如果我们不给services.xml文件添加description元素，则服务描述栏会显示服务名称。对于那些访问该服务的用户来说，服务描述是非常有用的。添加服务描述信息非常简单，给services.xml文件添加一个可选的description节点就可以了。该节点的值既可以是纯文本，也可以是HTML代码片段。
+服务编写者可以使用description元素来描述该服务。在Axis2 Web管理控制台中查看服务时，我们只能看到服务名和服务描述。如果我们不给services.xml文件添加description元素，则服务描述栏会显示服务名称。对于那些访问该服务的用户来说，服务描述是非常有用的。添加服务描述信息非常简单，给services.xml文件添加一个可选的description节点就可以了。该节点的值既可以是纯文本，也可以是HTML代码片段。
 
 {% highlight xml linenos %}
 <service>
