@@ -15,7 +15,7 @@ Oracle 数据库服务器更换IP地址后，服务端需要修改IP地址的文
 
 客户端需要修改的文件包括：`tnsnames.ora`。
 
-最佳实践：
+##### 最佳实践
 
 0.  不要在 `/etc/hosts` 文件中重复定义主机名，因为 hosts 文件的解析顺序是从上到下的，重复定义可能出现与期望不一致的结果。
 0.  最好的做法是在 hosts 文件中定义主机名，在 listener.ora,tnsnames.ora 中使用该主机名
@@ -35,7 +35,7 @@ TNS-00515: Connect failed because target host or object does not exist
 {% endhighlight %}
 
 
-当 host 设置的主机A不是本机，但是主机A上面又安装了 oracle 数据库，且监听器没有启动起来的时候，且 *sqlnet.ora中SQLNET.AUTHENTICATION\_SERVICES = (NTS)* 出现下述错误：
+当 host 设置的主机A不是本机，但是主机A上面又安装了 oracle 数据库，且监听器没有启动起来的时候，且 sqlnet.ora中 *SQLNET.AUTHENTICATION\_SERVICES = (NTS)* 出现下述错误：
 
 {% highlight sql %}
 TNS-01189: The listener could not authenticate the user
