@@ -11,7 +11,7 @@ Java 8 引入了函数式接口的概念。函数式接口其实就是只包含�
 
 ##### 如何定义函数式接口
 
-函数式接口可以包含一个拥有任意个参数的方法，函数式接口需要用 `@FunctionalInterface` 来注解。通过这个注解我们可以确保函数式接口只包含一个抽象方法。如果试图添加更多的抽象方法，则会报编译期错误 `Unexpected @FunctionalInterface annotation` 。主要指出的是，函数式接口是还可以包含任意数量的缺省方法（ default method ）和静态方法的。    
+函数式接口可以包含一个拥有任意个参数的方法，函数式接口需要用 `@FunctionalInterface` 来注解。通过这个注解我们可以确保函数式接口只包含一个抽象方法。如果试图添加更多的抽象方法，则会报编译期错误 `Unexpected @FunctionalInterface annotation` 。需要指出的是，函数式接口是还可以包含任意数量的缺省方法（ default method ）和静态方法的，而且函数式接口必须包含至少一个方法，而普通接口可以不包含接口。    
 没有任何参数的函数式接口    
 **Display.java**
 {% highlight java linenos %}
