@@ -51,9 +51,9 @@ links:
     url: /atom.xml    
   ## - title: Theme Setup
   ##   url: /theme-setup/
-  - title: 旧站入口
-    url: http://bruceinside.duapp.com
-    external: true
+  ## - title: 旧站入口
+  ##   url: http://bruceinside.duapp.com
+  ##   external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
