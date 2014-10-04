@@ -60,8 +60,11 @@
       {% elsif page == 1 %}
         <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
       {% else %}
+        {% comment %}
         <!--再点击了分页之后，链接地址变成http://suselinks.us/page3/page4这样的了-->
-        <!--<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>-->
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endcomment %}
+        
         <a href="{{ site.paginate_path | prepend: '/' | prepend: site.url |replace: ':num', page }}">{{ page }}</a>
       {% endif %}
     {% endfor %}
