@@ -51,6 +51,7 @@ wget -nd -c -P ~ --no-check-certificate --no-cookies "https://raw.githubusercont
 {% endhighlight %}
 
 如果你希望取消某些软件包的安装，可以通过定制 ooci.conf 文件来实现，你可以先运行下该脚本，在询问是否继续的时候选择否，ooci.conf 文件就自动创建好了，该配置文件和 openSUSE-One-Click-Installer.sh 同目录，都在你的用户家目录下。
+
 ##### 汇报 bug 地址
 
 [https://github.com/redhatlinux10/openSUSE-One-Click-Installer/issues](https://github.com/redhatlinux10/openSUSE-One-Click-Installer/issues)
