@@ -6,6 +6,13 @@ description: "openSUSE 一键安装脚本，在全新安装 openSUSE 之后，�
 tags: [openSUSE, openSUSE-One-Click-Installer]
 ---
 
+##### 更新记录
+###### 2014-11-20
+
+- 安装 VLC多媒体播放器和硬件解码包，可以很方便的支持视频硬件解码（注意硬解我只测试了AMD显卡，而且需要已经安装AMD私有驱动）。
+- 安装 支付宝安全控件（从支付宝官方网站下载并安装）。
+- 安装 hotshots 屏幕截图软件，可以保存为多种格式，还可以添加文字注释，划线，箭头，上传图片到网络图床等。
+- 安装 飞鸽传书的 linux 版本。
 
 ##### 功能介绍
 在全新安装 openSUSE 之后，openSUSE 一键安装脚本帮助你安装一些必要的软件包。比如多媒体播放相关的软件包, FireFox 的 Flash 插件, Google Chrome 浏览器,  Oracle JDK(不是 JRE，是适合于开发者用的 JDK), Oracle Java(就是 JRE，适合一般用户), wireshark, Virtual Box 虚拟机等等。该脚本还支持无限重复运行，你无需担心重复运行会对系统产生危害。
@@ -42,14 +49,6 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 - 定义 zypper 相关的别名，比如 zin 对应于 sudo zypper in, zrm 对应于 sudo zypper rm -u。 
 - 定义 xunlei-lixian 相关的别名，比如 lxlstoday 用于列出当天添加的 xunlei-lixian 下载任务。
 
-##### 更新记录
-
-###### 2014-11-20
-
-- 安装 VLC多媒体播放器和硬件解码包，可以很方便的支持视频硬件解码（注意硬解我只测试了AMD显卡，而且需要已经安装AMD私有驱动）。
-- 安装 支付宝安全控件（从支付宝官方网站下载并安装）。
-- 安装 hotshots 屏幕截图软件，可以保存为多种格式，还可以添加文字注释，划线，箭头，上传图片到网络图床等。
-- 安装 飞鸽传书的 linux 版本。
 
 ##### 脚本源代码仓库
 
