@@ -7,6 +7,7 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 ---
 
 ##### 更新记录
+
 ###### 2014-11-20
 
 - 安装 VLC多媒体播放器和硬件解码包，可以很方便的支持视频硬件解码（注意硬解我只测试了AMD显卡，而且需要已经安装AMD私有驱动）。
