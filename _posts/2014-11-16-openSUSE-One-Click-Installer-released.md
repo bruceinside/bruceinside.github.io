@@ -1,10 +1,11 @@
 ---
 layout: post
-title: openSUSE一键安装脚本发布了！
+title: openSUSE一键安装脚本（有更新）！
 date: 2014-11-16 12:15:00 +0800
 description: "openSUSE 一键安装脚本，在全新安装 openSUSE 之后，该脚本帮助你安装一些必要的软件包。比如多媒体播放相关的软件包, FireFox 的 Flash 插件, Google Chrome 浏览器,  Oracle JDK(不是 JRE，是适合于开发者用的 JDK), Oracle Java(就是 JRE，适合一般用户), wireshark, Virtual Box 虚拟机等等。"
 tags: [openSUSE, openSUSE-One-Click-Installer]
 ---
+
 
 ##### 功能介绍
 在全新安装 openSUSE 之后，openSUSE 一键安装脚本帮助你安装一些必要的软件包。比如多媒体播放相关的软件包, FireFox 的 Flash 插件, Google Chrome 浏览器,  Oracle JDK(不是 JRE，是适合于开发者用的 JDK), Oracle Java(就是 JRE，适合一般用户), wireshark, Virtual Box 虚拟机等等。该脚本还支持无限重复运行，你无需担心重复运行会对系统产生危害。
@@ -24,6 +25,10 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 - 安装 kolourpaint，一款和微软绘图及其相似的 KDE 绘图工具。
 - 安装 libreoffice 中文语言包，并解决 libreoffice 和 KDE 桌面主题不协调的问题。
 - 安装 tomahawk，一款基于 QT 编写的非常美观的音乐播放软件。 
+- 安装 VLC多媒体播放器和硬件解码包，可以很方便的支持视频硬件解码（注意硬解我只测试了AMD显卡，而且需要已经安装AMD私有驱动）。
+- 安装 支付宝安全控件（从支付宝官方网站下载并安装）。
+- 安装 hotshots 屏幕截图软件，可以保存为多种格式，还可以添加文字注释，划线，箭头，上传图片到网络图床等。
+- 安装 飞鸽传书的 linux 版本。
 - 安装 Oracle JDK 最新版本。默认安装的是 JDK，不是 JRE，要安装 JRE 的请修改 ooci.conf 文件
 - 安装 krusader，一款双面板的文件管理器，和 Total Commander 极其类似。
 - 安装 osdlyrics，一款第三方歌词显示程序。它为 Linux 下的多款播放器提供类似 Windows 下 QQ 音乐的歌词显示功能，并能自动从网络上下载歌词
@@ -37,7 +42,12 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 - 定义 zypper 相关的别名，比如 zin 对应于 sudo zypper in, zrm 对应于 sudo zypper rm -u。 
 - 定义 xunlei-lixian 相关的别名，比如 lxlstoday 用于列出当天添加的 xunlei-lixian 下载任务。
 
-
+##### 更新记录
+###### 2014-11-20
+- 安装 VLC多媒体播放器和硬件解码包，可以很方便的支持视频硬件解码（注意硬解我只测试了AMD显卡，而且需要已经安装AMD私有驱动）。
+- 安装 支付宝安全控件（从支付宝官方网站下载并安装）。
+- 安装 hotshots 屏幕截图软件，可以保存为多种格式，还可以添加文字注释，划线，箭头，上传图片到网络图床等。
+- 安装 飞鸽传书的 linux 版本。
 
 ##### 脚本源代码仓库
 
