@@ -10,7 +10,6 @@ tags: [mpv, VLC, GPU Acceleration, VAAPI]
 
 ###### 硬件环境
 
-条目  | 内容
 :------------- | :-------------
 CPU处理器  | AMD 速龙II X2 270
 显卡  | 蓝宝石 HD5670 至尊版 512M显存
