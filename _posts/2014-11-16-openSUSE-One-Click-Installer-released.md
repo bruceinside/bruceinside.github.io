@@ -15,6 +15,10 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 - 安装 hotshots 屏幕截图软件，可以保存为多种格式，还可以添加文字注释，划线，箭头，上传图片到网络图床等。
 - 安装 飞鸽传书的 linux 版本。
 
+###### 2014-11-22
+
+- 转换 中文的用户目录为英文目录，源中文目录中的文件会自动迁移到英文目录中。转换的好处是可以很方便的在终端中进入用户目录，哪怕是在没有中文输入法的情况下。
+
 ##### 功能介绍
 在全新安装 openSUSE 之后，openSUSE 一键安装脚本帮助你安装一些必要的软件包。比如多媒体播放相关的软件包, FireFox 的 Flash 插件, Google Chrome 浏览器,  Oracle JDK(不是 JRE，是适合于开发者用的 JDK), Oracle Java(就是 JRE，适合一般用户), wireshark, Virtual Box 虚拟机等等。该脚本还支持无限重复运行，你无需担心重复运行会对系统产生危害。
 
@@ -47,6 +51,7 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 - 安装 wireshark，著名的网络抓包工具。 
 - 安装 KDiff3，类似 Beyond Compare 的文件 / 文件夹比较工具。
 - 安装 VirtualBox，Oracle 出品的虚拟机。
+- 转换 中文的用户目录为英文目录，源中文目录中的文件会自动迁移到英文目录中。转换的好处是可以很方便的在终端中进入用户目录，哪怕是在没有中文输入法的情况下。
 - 定义 zypper 相关的别名，比如 zin 对应于 sudo zypper in, zrm 对应于 sudo zypper rm -u。 
 - 定义 xunlei-lixian 相关的别名，比如 lxlstoday 用于列出当天添加的 xunlei-lixian 下载任务。
 
