@@ -48,8 +48,7 @@ xvba-video  | 0.8.0-9.1 由 Packman 打包
 
 在打开显卡硬件加速的时候，MPV 的平均 CPU 负载为 19.53% ，CPU负载比较稳定，没有出现明显的异常波动。  
 在不打开显卡硬件加速的时候，MPV 的平均 CPU 负载为 66.47% ，CPU负载比较稳定，没有出现明显的异常波动。  
-
-点线图如下所示：
+点线图如下所示：  
 ![](http://suselinks-us.qiniudn.com/mpv-with-vs-mpv-without-vaapi-1080p.png)
 
 ###### VLC 打开和不打开显卡硬件加速时的平均CPU负载对比
