@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Linux 下 MPV 和 VLC 播放器 VAAPI 显卡加速对比
+title: Linux 下 MPV 和 VLC 播放器 VAAPI 显卡加速对比
 date: 2014-12-06 10:15:00 +0800
 description: "分别在开启 / 不开启 GPU 显卡加速的情况下，对 MPV 和 VLC 视频播放器的 CPU 负载进行测试对比。"
 tags: [mpv, VLC, GPU Acceleration, VAAPI]
