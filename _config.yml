@@ -27,6 +27,8 @@ owner:
   google_plus:
   
   # 腾讯微博
+  sina_weibo:     bruceauyeung  
+  # 腾讯微博
   tecent_weibo:   redhatlinux10 
 
 # Analytics and webmaster tools stuff goes here
