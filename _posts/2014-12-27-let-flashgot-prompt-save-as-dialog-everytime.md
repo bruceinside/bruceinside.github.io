@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 让 Flashgot 每次都弹出保存对话框
-date: 2014-12-06 10:15:00 +0800
+date: 2014-12-27 00:50:00 +0800
 description: ""
 tags: [Firefox, Flashgot]
 ---
