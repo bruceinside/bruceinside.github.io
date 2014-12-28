@@ -13,5 +13,6 @@ Opera 桌面开发团队已经发布了 Opera 26 版本，该版本用 DuckDuckG
 然后下载 [default_partner_content.json](http://suselinks-us.qiniudn.com/default_partner_content.json)，把该文件复制到 `resources` 目录（就是上文提到的目录）下并覆盖掉原来的文件。
 
 现在启动 Opera，进入 Opera 设置，点击`管理搜索引擎`，你现在可以看到 Bing 出现在默认搜索引擎列表中了，把鼠标悬浮在 Bing 的上面并点击`默认值`，这样就全部完成了。
+![](http://suselinks-us.qiniudn.com/set-bing-as-default-search-engine-in-opera-26.png)
 
 如果你希望把 DuckDuckGo 找回来，你需要把之前备份的 `default_partner_content.json.bak` 文件重命名并粘贴到 `resources` 目录下。
