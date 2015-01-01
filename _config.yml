@@ -1,6 +1,6 @@
 # baseurl:          "/"
 title:            牛牛博客
-description:      stuffs about openSUSE and Java 
+description:      stuffs about openSUSE and Java
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://suselinks.us
 
@@ -11,46 +11,48 @@ owner:
   bio:            "Borned, Alive, Suffering"
   email:          bruce.oy@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        
-  facebook:       
+  twitter:
+  facebook:
   github:         redhatlinux10
-  stackoverflow: 
-  linkedin:       
-  instagram:      
-  lastfm:         
-  tumblr: 
-  pinterest: 
-  foursquare: 
-  steam: 
-  dribbble: 
+  stackoverflow:
+  linkedin:
+  instagram:
+  lastfm:
+  tumblr:
+  pinterest:
+  foursquare:
+  steam:
+  dribbble:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
-  
+
   # 腾讯微博
-  sina_weibo:     bruceauyeung  
+  sina_weibo:     bruceauyeung
   # 腾讯微博
-  tecent_weibo:   redhatlinux10 
+  tecent_weibo:   redhatlinux10
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-49021671-2
-google_verify:      
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:    
+bing_verify:
 baidu_tongji:       6e63f9f606e6a9fdffd7adb9d700035a
 jiathis:
   uid: 1531172
-    
+
 # Links to include in top navigation
 # For external links add external: true
 links:
+  - title: 在线电视
+    url: /tv.html  
+  - title: 标签云
+    url: /tags/
   - title: 关于我
     url: /about/
   # - title: 文章
   #   url: /posts/
-  - title: 标签云
-    url: /tags/ 
   - title: 订阅本站
-    url: /atom.xml    
+    url: /atom.xml
   ## - title: Theme Setup
   ##   url: /theme-setup/
   ## - title: 旧站入口
@@ -78,7 +80,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
