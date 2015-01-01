@@ -44,7 +44,8 @@ jiathis:
 # For external links add external: true
 links:
   - title: 在线电视
-    url: /tv.html  
+    url: /tv.html
+    external: true  
   - title: 标签云
     url: /tags/
   - title: 关于我
