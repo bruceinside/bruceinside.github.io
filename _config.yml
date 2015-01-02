@@ -9,7 +9,7 @@ owner:
   name:           Bruce Auyeung
   avatar:         bio-photo.jpg
   bio:            "Borned, Alive, Suffering"
-  email:          bruce.oy@gmail.com
+  email:          bruce.auyeung@yahoo.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:
   facebook:
@@ -45,7 +45,7 @@ jiathis:
 links:
   - title: 在线电视
     url: /tv.html
-    external: true  
+    external: true
   - title: 标签云
     url: /tags/
   - title: 关于我
