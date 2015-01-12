@@ -31,7 +31,7 @@ tags: [openSUSE, VAAPI, AMD/ATI, Video Decoding, Hardware Acceleration, XvBA]
 
 在 linux 系统中安装显卡私有驱动，我认为还是应该优先选择社区为你的发行版打好的私有驱动包，其次才是去显卡官方网站下载驱动然后自己编译。这主要还是从降低显卡驱动安装难度这个角度出发，让广大的新手朋友避免驱动编译安装失败的挫折。而在 openSUSE 13.2 系统中，要安装显卡私有驱动，是一件相对容易的事情，唯一需要注意的是，该方法只支持 Radeon HD 5000 系列及以后的显卡，与前文提到的硬件要求相比更加严格了。
 
-0. 下载 http://geeko.ioda.net/mirror/amd-fglrx/ymp/amd-ati-fglrx64.ymp 文件。
+0. 下载 [http://geeko.ioda.net/mirror/amd-fglrx/ymp/amd-ati-fglrx64.ymp](http://geeko.ioda.net/mirror/amd-fglrx/ymp/amd-ati-fglrx64.ymp) 文件。
 0. 点击该文件即可完成驱动安装。
 
 安装完成之后重启系统，运行 `fglrxinfo` 命令即可查看显卡驱动信息，以此来判断显卡私有驱动是否安装正确；你也可以直接打开 Catalyst Control Center （该工具会出现在你的程序菜单中）来核实。
@@ -49,10 +49,10 @@ mpv 软件包也是由 packman 提供的，你只需用浏览器打开 [http://p
 
 现在你剩下的只有配置这个环节了。mpv 默认的编译参数是打开了 VAAPI 支持的，但是却并没有默认用 VAAPI 去进行视频硬件解码和输出。你需要编辑 `～/.config/mpv/mpv.conf` 文件（不存在的话就自行创建），在文件中加入如下内容：
 
-```
+{% highlight text linenos %}
 hwdec=vaapi
 vo=vaapi,opengl-hq,opengl
-```
+{% endhighlight %}
 
 ##### 播放视频并验证是否已经开启VAPPI加速
 
@@ -60,7 +60,7 @@ mpv 是命令行程序（当然也做到了与桌面环境集成，可以选中�
 
 如何验证播放视频时是否在用 VAAPI 进行视频加速解码呢？ 在终端里运行 `mpv /path/to/yourfile` 命令时，会出来一些像下面这样的日志信息：
 
-```
+{% highlight text linenos %}
 [stream] Video (+) --vid=1 (*) (h264)
 [stream] Audio (+) --aid=1 --alang=eng (*) (aac)
 File tags:
@@ -77,14 +77,13 @@ libva info: va_openDriver() returns 0
 Trying to use hardware decoding.
 AO: [pulse] 44100Hz stereo 2ch float
 VO: [vaapi] 1280x720 vaapi
-```
+{% endhighlight %}
 
 如果你能看到 `VO: [vaapi] 1280x720 vaapi` 类似的字样（就是末尾那行），那就说明正在用 VAAPI 进行硬件解码。
 
 这里我还要补充一句，并不是所有用 H264 和 VC1 编码的文件都可以进行硬件加速，在视频编码里面有个 `profile` 的概念，只有被显卡和 VAAPI 实现支持的 `profile` 才可以进行。具体有哪些 profile 可以被硬解，可以通过 `vainfo` 命令（在 openSUSE 系统中该命令由 `vaapi-tools` 包提供，也是在 packman 源里面的）来查看：
 
-```
-> vainfo
+{% highlight text linenos %}
 libva info: VA-API version 0.34.0
 libva info: va_getDriverName() returns 0
 libva info: User requested driver 'fglrx'
@@ -96,5 +95,4 @@ vainfo: Driver version: Splitted-Desktop Systems XvBA backend for VA-API - 0.8.0
 vainfo: Supported profile and entrypoints
       VAProfileH264High               : VAEntrypointVLD
       VAProfileVC1Advanced            : VAEntrypointVLD
-
-```
+{% endhighlight %}
