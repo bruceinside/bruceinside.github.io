@@ -4,6 +4,11 @@
 <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
 
+
+{% if site.tencent_analytics %}
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId={{ site.tencent_analytics }}" charset="UTF-8"></script>
+{% endif %}
+
 {% if site.baidu_tongji %}
 <!--百度访问分析代码-->
 <script type="text/javascript">
