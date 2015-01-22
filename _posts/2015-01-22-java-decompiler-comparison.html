@@ -1,0 +1,87 @@
+---
+layout: post
+title: Java反编译器比较
+description: "帮助Java开发者在 openSUSE 操作系统中快速安装 Oracle JDK 环境。"
+modified: 2015-01-22 20:40:00 +0800
+tags: [Java,decompiler,反编译器]
+---
+
+
+<style><!--
+.entry table {border: 1px solid gray;border-spacing: 0px;}
+.entry td {border: 1px solid gray;}
+.entry th {border: 1px solid gray;background-color: lightgray;}
+.entry caption {border-bottom: 1px solid gray;}
+--></style>
+<p>先说结论：比起DJ Java Compiler来说，我更推荐大家使用JD-GUI或者JDeclipse。 下面是DJ Java Compiler和JD-GUI的特性详细对比。</p>
+<div class="entry">
+<table>
+<thead>
+<tr><th>特性</th><th>DJ Java Decompiler</th><th>JD-GUI</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>主页</td>
+<td>http://www.djjavadecompiler.com/</td>
+<td>http://java.decompiler.free.fr/</td>
+</tr>
+<tr>
+<td>更新时间</td>
+<td>不确定</td>
+<td>18 Aug 2010</td>
+</tr>
+<tr>
+<td>免费？</td>
+<td>3.7.7.81版本免费，最新版本收费，可以免费使用10次，需要注册</td>
+<td>不能包含或者嵌入到商业软件中，其它情况下都是免费的，也就是说商业环境中使用也是免费的</td>
+</tr>
+<tr>
+<td>内核</td>
+<td>jad<sup>[<a href="#note1">注一</a>]</sup></td>
+<td>JD-Core</td>
+</tr>
+<tr>
+<td>支持平台</td>
+<td>windows only</td>
+<td>windows,linux,mac osx</td>
+</tr>
+<tr>
+<td>支持annotations吗？</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>支持泛型吗？</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>支持enum吗？</td>
+<td>不支持<sup>[<a href="#note2">注二</a>]</sup></td>
+<td>支持</td>
+</tr>
+<tr>
+<td>是否有outline？</td>
+<td>有，但是只能显示方法列表</td>
+<td>有，字段和方法都能显示，且界面和eclipse的outline保持一致</td>
+</tr>
+<tr>
+<td>能否直接查看jar包？</td>
+<td>能，但是仅限于查看jar包中有哪些文件，不能直接查看jar包中的class的内容（可以先把要查看的class抽取并保存为jad文件，再用DJ Java Decompiler打开，可是这也太蛋疼了吧）。</td>
+<td>能，以eclipse大纲视图打开jar包，能直接在大纲视图中选择文件并双击来查看class的内容</td>
+</tr>
+<tr>
+<td>文件关联</td>
+<td>提供配置项进行class、jar等文件的关联</td>
+<td>没有提供</td>
+</tr>
+<tr>
+<td>是否有eclipse插件？</td>
+<td><a href="http://sourceforge.net/projects/jadclipse/" target="_blank">jadclipse</a>，非同一公司/人出品</td>
+<td><a href="http://java.decompiler.free.fr/?q=jdeclipse" target="_blank">jdeclipse</a>，是同一公司/人出品</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a name="note1"></a>注一：Jad是一个不再维护的Java反编译器。最新版本的Jad仅支持版本为45.3, 46.0 和47.0的Java类文件，而这些都不是Java 5 生成的。</p>
+<p><a name="note2"></a>注二：反编译出来的代码与源代码不一致则认为不支持</p>
