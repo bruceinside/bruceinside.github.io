@@ -52,7 +52,7 @@ ffmpeg。这意味着，openSUSE的官方源和 OBS 源都不会包含这两个�
 先看看我当前的包是从哪里安装的。
 
 {% highlight bash linenos %}
-&gt; zypper info libqmmp0-plugins
+> zypper info libqmmp0-plugins
 正在加载软件源数据...
 正在读取已安装的软件包...
 软件包 libqmmp0-plugins 的信息：
@@ -70,8 +70,6 @@ ffmpeg。这意味着，openSUSE的官方源和 OBS 源都不会包含这两个�
 Plugins for libqmmp.
 {% endhighlight %}
 
-
-
 再从 packman 源重新安装 libqmmp0-plugins。
 
 {% highlight bash linenos %}
@@ -80,12 +78,10 @@ sudo zypper in  --from packman qmmp libqmmp0 libqmmp0-plugins
 {% endhighlight %}
 
 
-
-
 安装完成之后，再看看该包的内容：
 
 {% highlight bash linenos %}
-&gt; rpm -ql libqmmp0-plugins
+> rpm -ql libqmmp0-plugins
 ......
 /usr/lib64/qmmp/Input
 /usr/lib64/qmmp/Input/libcdaudio.so
@@ -102,8 +98,6 @@ sudo zypper in  --from packman qmmp libqmmp0 libqmmp0-plugins
 /usr/lib64/qmmp/Output
 ......
 {% endhighlight %}
-
-
 
 
 啊哈，终于有了！现在重启下 qmmp，是不是可以播放 mp3 了？
