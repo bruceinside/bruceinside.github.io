@@ -3,7 +3,7 @@ layout: post
 title: openSUSE 系统中 Qmmp 不能播放 mp3 的解决方法
 date: 2015-01-23 21:30:00 +0800
 description: "由于我非常喜欢 qmmp 这款麻雀虽小五脏俱全的音乐播放器，所以在 openSUSE 13.1 安装完成之后，第一时间进行了安装。可是令人奇怪的事发生了，qmmp竟然不能播放 mp3 文件了！"
-tags: [packman,mp3,qmmp,openSUSE]
+tags: [packman,mp3,Qmmp,openSUSE]
 ---
 
 
