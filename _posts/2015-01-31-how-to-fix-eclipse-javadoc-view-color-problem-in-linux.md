@@ -13,6 +13,7 @@ tags: [Eclipse,linux,openSUSE]
 当你在 linux 系统中使用 Eclipse 进行编程开发的时候，你可能会遇到 JavaDoc 视图中文字或者链接颜色和背景色非常相近导致无法看清文字或链接内容的尴尬局面，就像下图中**链接文字**那样，你得瞪大了眼睛仔细辨认方可勉强看清。
 ![](http://suselinks-us.qiniudn.com/eclipse-javadoc-view-color-problem.png)
 
+
 这就是我在 openSUSE 系统中遇到的问题。在这样蛋疼的颜色对比之下，用不了多久你的眼睛就会吃不消了。
 
 ##### 第一时间想到的解决方案
@@ -21,9 +22,12 @@ tags: [Eclipse,linux,openSUSE]
 
 ##### JavaDoc 视图样式和操作系统保持一致
 
-几番搜索，终出结果。原来 Eclipse 中 JavaDoc 视图的背景色并不能在 Eclipse 中设置，而是只能在操作系统（不论 Windows 还是 Linux）层面设置的！如果你和我一样是 openSUSE 用户，就只需要在 *系统设置 -> 应用程序外观 -> 颜色 -> 颜色* 中修改工具提示背景色（Tooltip Background）和工具提示文字颜色（Tooltip Text）即可。通常我把背景色修改为 `#DCDCDC`（就是四十种颜色中白色左边第一个），文字颜色修改为纯黑色。
+几番搜索，终出结果。
 
+原来 Eclipse 中 JavaDoc 视图的背景色并不能在 Eclipse 中设置，而是只能在操作系统（不论 Windows 还是 Linux）层面设置的！如果你和我一样是 openSUSE 用户，就只需要在 *系统设置 -> 应用程序外观 -> 颜色 -> 颜色* 中修改工具提示背景色（Tooltip Background）和工具提示文字颜色（Tooltip Text）即可。通常我把背景色修改为 `#DCDCDC`（就是四十种颜色中白色左边第一个），文字颜色修改为纯黑色。
 ![](http://suselinks-us.qiniudn.com/after-fix-eclipse-javadoc-view-color-problem.png)
+
+
 
 ##### 吐槽
 
