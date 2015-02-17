@@ -2,7 +2,7 @@
 layout: post
 title: linux 系统中 Chrome 地址栏键入非常缓慢的解决方法
 date: 2015-02-17 02:00:00 +0800
-description: ""
+description: "当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器时，会发现有这么几个性能问题存在：在地址栏输入内容时，发现键入速度非常缓慢......"
 tags: [Google Chrome,linux,Address Bar, Omnibox]
 ---
 
