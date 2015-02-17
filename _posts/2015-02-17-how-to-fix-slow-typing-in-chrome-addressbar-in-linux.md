@@ -37,11 +37,9 @@ tags: [Google Chrome,linux,Address Bar, Omnibox]
 
 >I'm hoping we can enable RenderTextHarfbuzz by default this week, now that font fallback landed.
 That still may not fix this issue, since RenderTextHarfBuzz::ShapeRun calls internal::CreateSkiaTypeface.
-
->I don't think we ought to cache stylized fonts within a RenderText object, that probably wouldn't help either.
+I don't think we ought to cache stylized fonts within a RenderText object, that probably wouldn't help either.
 (in this scenario, the omnibox dropdown result views are being tossed and recreated as fast as possible)
-
->It seems like we'd need a centralized cache of fonts, so the most commonly used ones are readily available.
+It seems like we'd need a centralized cache of fonts, so the most commonly used ones are readily available.
 Perhaps in the near term, OmniboxResultView could cache stylized FontLists for its RenderText instances.
 
 原来问题的根源出在 Skia 的字体这块，然而由于 `RenderTextHarfBuzz` 还是调用了 `internal::CreateSkiaTypeface`，所以问题还是可能存在。
