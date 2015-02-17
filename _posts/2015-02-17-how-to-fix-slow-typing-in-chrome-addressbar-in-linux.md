@@ -6,7 +6,7 @@ description: "当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器
 tags: [Google Chrome,linux,Address Bar, Omnibox]
 ---
 
-
+对于希望直接看解决方案的同学，请参看文末的结论章节。
 
 ##### 遇到了什么问题？
 
@@ -60,7 +60,7 @@ Perhaps in the near term, OmniboxResultView could cache stylized FontLists for i
 
 ##### 结论
 
-0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans*，反正字体名称不是中文的就行（比如 *文泉驿微米黑* 这种有本地化字体名称的就不行）。
+0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 40、41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans*，反正字体名称不是中文的就行（比如 *文泉驿微米黑* 这种有本地化字体名称的就不行）。
 0. 该补丁可能会合入 42 版本，但是根据我的测试，*google-chrome-unstable-42.0.2298.0-1.x86_64* 尚未包含该补丁。
 0. 对于 40 版本以前的 Google Chrome ，你还需要在启动 Google Chrome 时带上 `--enable-harfbuzz-rendertext` 参数。
 0. 做了上述修改之后，该文开头提到了4个性能问题都解决了！ Google Chrome 和 Opera 都正常了，哦耶！
