@@ -54,13 +54,13 @@ Perhaps in the near term, OmniboxResultView could cache stylized FontLists for i
 
 0. Google Chrome UI 的缺省字体继承自 Gnome 桌面设置（而不是 `chrome://settings/`）。
 0. 地址栏弹出框的缺省字体也是继承自 Gnome 桌面设置。
-0. 字体名称的官方名称和本地化名称不相同导致了 Skia 缓存无法命中。
+0. 字体名称的标准名称和本地化名称不相同导致了 Skia 缓存无法命中。
 0. Skia 缓存无法命中导致 fontconfig 频繁被调用，而该调用非常消耗 CPU 时间！
 
 
 ##### 结论
 
-0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 40、41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面设置中（GTK）的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans*，反正字体名称不是中文的就行（比如 *文泉驿微米黑* 这种有本地化字体名称的就不行）。
+0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 40、41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面设置中（GTK）的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans* 或者任何其它没有本地化名称的字体。像默认的 *无衬线* 以及 *文泉驿微米黑* 这样的有本地化名称的就不行的， *无衬线* 的标准名称是 *Sans Serif*， *无衬线* 是它的本地化名称，这样的字体会导致 Skia 缓存无法命中。
 0. 该补丁可能会合入 42 版本，但是根据我的测试，*google-chrome-unstable-42.0.2298.0-1.x86_64* 尚未包含该补丁。
 0. 对于 40 版本以前的 Google Chrome ，你还需要在启动 Google Chrome 时带上 `--enable-harfbuzz-rendertext` 参数。
 0. 做了上述修改之后，该文开头提到了4个性能问题都解决了！ Google Chrome 和 Opera 都变得异常流畅了，哦耶！
