@@ -1,8 +1,8 @@
 ---
 layout: post
-title: linux 系统中 Chrome 地址栏键入非常缓慢的解决方法
+title: linux 系统中 Chrome 地址栏输入卡顿的解决方法
 date: 2015-02-17 02:00:00 +0800
-description: "当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器时，会发现有这么几个性能问题存在：在地址栏输入内容时，发现键入速度非常缓慢......"
+description: "当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器时，会发现有这么几个性能问题存在：在地址栏输入内容时，发现输入非常卡顿......"
 tags: [Google Chrome,linux,Address Bar, Omnibox]
 ---
 
@@ -11,7 +11,7 @@ tags: [Google Chrome,linux,Address Bar, Omnibox]
 ##### 遇到了什么问题？
 
 当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器时，会发现有这么几个性能问题存在：
-0. 在地址栏输入内容时，发现键入速度非常缓慢，完全赶不上我敲击键盘按键的速度，有时还会出现键入的字符乱序的情况。当把光标放在地址栏URL的末尾，然后按 Backspace 键进行删除时，也非常的缓慢。
+0. 在地址栏输入内容时，发现输入非常卡顿，完全赶不上我敲击键盘按键的速度，有时还会出现输入的字符乱序的情况。当把光标放在地址栏URL的末尾，然后按 Backspace 键进行删除时，也非常的缓慢。
 0. 切换浏览页签也能感觉到明显的延迟。
 0. 点击右上角的三道杠图标来打开 Google Chrome 的菜单，也能感觉到菜单弹出有延迟，同时在菜单上移动鼠标，一样能感觉到菜单项的切换有延迟。
 0. 执行上述操作时可以观察到 Google Chrome 的 UI 进程的 CPU 占用率会狂升至 100% 左右！
@@ -50,7 +50,7 @@ Perhaps in the near term, OmniboxResultView could cache stylized FontLists for i
 
 再一次，又找到一个故障： [Excessive call for SkFontConfigInterfaceDirect::matchFamilyName from OmniboxResultView](https://code.google.com/p/chromium/issues/detail?id=424082)
 
-故障描述中说，为了渲染地址栏的弹出菜单，每当你键入一个字符， `matchFamilyName()` 方法就会被调用 100 到 200 次！ 同时 [comment 30](https://code.google.com/p/chromium/issues/detail?id=424082#c30) 给出了真正的问题根源：
+故障描述中说，为了渲染地址栏的弹出菜单，每当你输入一个字符， `matchFamilyName()` 方法就会被调用 100 到 200 次！ 同时 [comment 30](https://code.google.com/p/chromium/issues/detail?id=424082#c30) 给出了真正的问题根源：
 
 0. Google Chrome UI 的缺省字体继承自 Gnome 桌面设置（而不是 `chrome://settings/`）。
 0. 地址栏弹出框的缺省字体也是继承自 Gnome 桌面设置。
@@ -60,7 +60,7 @@ Perhaps in the near term, OmniboxResultView could cache stylized FontLists for i
 
 ##### 结论
 
-0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 40、41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans*，反正字体名称不是中文的就行（比如 *文泉驿微米黑* 这种有本地化字体名称的就不行）。
+0. 啊哈！问题根源找到了！ 该 comment 的作者也提交补丁了，可是 Google Chrome 40、41 版本还没有打该补丁的呀，怎么办呢？ 上述故障的末尾也提到了一个规避方法，那就是修改 Gnome 桌面设置中（GTK）的缺省字体。以使用 KDE 作为默认桌面的系统来说，打开 *系统设置 -> 应用程序外观 -> GTK* ，修改字体（默认是 *无衬线*）为 *Droid Sans* 或者 *DejaVu Sans*，反正字体名称不是中文的就行（比如 *文泉驿微米黑* 这种有本地化字体名称的就不行）。
 0. 该补丁可能会合入 42 版本，但是根据我的测试，*google-chrome-unstable-42.0.2298.0-1.x86_64* 尚未包含该补丁。
 0. 对于 40 版本以前的 Google Chrome ，你还需要在启动 Google Chrome 时带上 `--enable-harfbuzz-rendertext` 参数。
 0. 做了上述修改之后，该文开头提到了4个性能问题都解决了！ Google Chrome 和 Opera 都变得异常流畅了，哦耶！
