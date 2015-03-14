@@ -148,10 +148,11 @@ tags: [openSUSE,TOra]
 </li>
 </ul>
 <h5>安装　TOra</h5>
-<p>在 openSUSE 安装 TOra，是一件非常简单的事情。<a href="http://torasql.com/Download">TOra 官方下载页面</a>提供了<a href="http://download.yarpen.cz/">openSUSE 的软件安装源列表</a>，你只需添加适合自己操作系统的软件源即可。以 openSUSE12.2 为例，执行下述命令添加软件源：</p>
+<p>在 openSUSE 安装 TOra，是一件非常简单的事情。<a href="http://torasql.com/Download">TOra 官方下载页面</a>提供了<a href="http://download.yarpen.cz/">openSUSE 的软件安装源列表</a>，你只需添加适合自己操作系统的软件源即可。以 openSUSE_13.1 为例，执行下述命令添加软件源：</p>
 
 {% highlight bash linenos %}
-sudo zypper ar -r http://pmbs-api.links2linux.org:8080/Oracle/openSUSE_12.2/Oracle.repo
+# 其它 openSUSE 版本的资源库文件链接请直接用浏览器访问 http://pmbs-api.links2linux.org:8080/Oracle/ 就可以找到
+sudo zypper ar -r http://pmbs-api.links2linux.org:8080/Oracle/openSUSE_13.1/Oracle.repo
 {% endhighlight %}
 
 <p>然后执行下述命令即可完成TOra的安装：</p>
