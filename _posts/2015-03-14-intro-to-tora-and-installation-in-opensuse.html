@@ -9,7 +9,7 @@ tags: [openSUSE,TOra]
 
 <h5>TOra 简介</h5>
 <p>TOra 是一款开源跨平台的数据库管理图形工具，能够管理多数常见的数据库平台，包括 Oracle， Mysql 和 Postgres，同时还能对那些支持 ODBC 访问的数据库提供有限支持。TOra 是采用QT工具集开发，界面和功能都类似于Toad，支持绝大多数 linux， Mac OS X， MS Windows， 和 UNIX 系统。 除了常见的查询和数据浏览功能外，TOra额外还为数据库管理员和开发者提供了一些有用的工具，比如 PL/SQL 调试工具，SQL语法高亮，表格字段自动补全等。</p>
-<h5>截图</h5>
+<h5>截图（*点击可以看高清无码图*）</h5>
 <p><a href="http://i.imgur.com/YJj6E25.png"><img class="alignnone size-medium wp-image-841" title="main-window" src="http://i.imgur.com/YJj6E25.png" alt="" width="300" height="174" /></a></p>
 <h5>特性</h5>
 <ul>
@@ -181,9 +181,10 @@ apper /mnt/F/Software/linux/oracle-instantclient11.2-basic-11.2.0.3.0-1.i386.rpm
 <li>修改 <em>LD_LIBRARY_PATH</em>环境变量。该环境变量主要用于指定查找共享库（ 动态链接库）时除了默认路径之外的其他路径。TOra会从这些路径查找 Oracle Instant Client 的相关类库。执行下述命令即可完成修改：
 
 {% highlight bash linenos %}
+
 vi ~/.bashrc
 export LD_LIBRARY_PATH='/usr/lib/oracle/11.2/client/lib/:'$LD_LIBRARY_PATH
-source ~/.bashrc  
+source ~/.bashrc
 {% endhighlight %}
 </li>
 </ol>
