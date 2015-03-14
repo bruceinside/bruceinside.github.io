@@ -16,7 +16,8 @@ introduction-to-qmmp)》），怎么可能不支持 mp3 格式呢？
 
 ##### 解决过程
 
-qmmp 能播放哪些格式的音乐文件，取决于它的输入插件。从 qmmp-&gt;设置-&gt;插件-&gt;decoders 可以看到已经安装了哪些输入插件。
+qmmp 能播放哪些格式的音乐文件，取决于它的输入插件。从 qmmp-&gt;设置-&gt;插件-&gt;decoders 可以看到已经安装了哪些输入插件。  
+
 ![](http://i2.minus.com/j5Qg8ymXk5lW4.png)
 
 另外，这些输入插件是包含在 libqmmp0-plugins 这个包中的。
