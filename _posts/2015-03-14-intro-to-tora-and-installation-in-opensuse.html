@@ -9,7 +9,7 @@ tags: [openSUSE,TOra]
 
 <h5>TOra 简介</h5>
 <p>TOra 是一款开源跨平台的数据库管理图形工具，能够管理多数常见的数据库平台，包括 Oracle， Mysql 和 Postgres，同时还能对那些支持 ODBC 访问的数据库提供有限支持。TOra 是采用QT工具集开发，界面和功能都类似于Toad，支持绝大多数 linux， Mac OS X， MS Windows， 和 UNIX 系统。 除了常见的查询和数据浏览功能外，TOra额外还为数据库管理员和开发者提供了一些有用的工具，比如 PL/SQL 调试工具，SQL语法高亮，表格字段自动补全等。</p>
-<h5>截图（*点击可以看高清无码图*）</h5>
+<h5>截图（<i>点击可以看高清无码图</i>）</h5>
 <p><a href="http://i.imgur.com/YJj6E25.png"><img class="alignnone size-medium wp-image-841" title="main-window" src="http://i.imgur.com/YJj6E25.png" alt="" width="300" height="174" /></a></p>
 <h5>特性</h5>
 <ul>
@@ -183,17 +183,21 @@ apper /mnt/F/Software/linux/oracle-instantclient11.2-basic-11.2.0.3.0-1.i386.rpm
 {% highlight bash linenos %}
 
 vi ~/.bashrc
+
 export LD_LIBRARY_PATH='/usr/lib/oracle/11.2/client/lib/:'$LD_LIBRARY_PATH
+
 source ~/.bashrc
+
 {% endhighlight %}
+
 </li>
 </ol>
 <h5>添加 Mysql、PostgreSQL支持</h5>
-<p>安装完成 Oracle Instant Client 之后，直接在当前会话运行命令 tora 就可以启动 TOra 并访问 Oracle数据库了。如果你还希望TOra也能访问Mysql和PostgreSQL，还需要执行下述命令安装相关RPM包：</p>
+<p>安装完成 Oracle Instant Client 之后，直接在当前会话运行命令 tora 就可以启动 TOra 并访问 Oracle 数据库了。如果你还希望 TOra 也能访问 Mysql 和 PostgreSQL，还需要执行下述命令安装相关RPM包：</p>
 
 {% highlight bash linenos %}
 sudo zypper in libqt4-sql-postgresql
 sudo zypper in libqt4-sql-mysql
 {% endhighlight %}
 <h5>运行 TOra</h5>
-<p>由于安装过程中修改了环境变量 （ <i>source ~/.bashrc</i> ），但是只在执行 source 命令的 终端当前会话有效，所以，要运行TOra，要么在当前会话运行命令 tora，要么注销当前GUI会话并重新登录之后点击开始菜单中的启动项。</p>
+<p>由于安装过程中修改了环境变量 （ <i>source ~/.bashrc</i> ），但是只在执行 source 命令的 终端当前会话有效，所以，要运行 TOra，要么在当前会话运行命令 tora，要么注销当前GUI会话并重新登录之后点击开始菜单中的启动项。</p>
