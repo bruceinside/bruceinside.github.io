@@ -1,0 +1,180 @@
+---
+layout: post
+title: TOra简介和在openSUSE上的安装方法
+description: "TOra 是一款开源跨平台的数据库管理图形工具，能够管理多数常见的数据库平台，包括 Oracle， Mysql 和 Postgres，同时还能对那些支持 ODBC 访问的数据库提供有限支持。TOra 是采用QT工具集开发，界面和功能都类似于Toad，支持绝大多数 linux， Mac OS X， MS Windows， 和 UNIX 系统。 除了常见的查询和数据浏览功能外，TOra额外还为数据库管理员和开发者提供了一些有用的工具，比如 PL/SQL 调试工具，SQL语法高亮，表格字段自动补全等。"
+modified: 2015-03-14 15:00:00 +0800
+tags: [openSUSE,TOra]
+---
+
+
+
+
+<h5>TOra 简介</h5>
+<p>TOra 是一款开源跨平台的数据库管理图形工具，能够管理多数常见的数据库平台，包括 Oracle， Mysql 和 Postgres，同时还能对那些支持 ODBC 访问的数据库提供有限支持。TOra 是采用QT工具集开发，界面和功能都类似于Toad，支持绝大多数 linux， Mac OS X， MS Windows， 和 UNIX 系统。 除了常见的查询和数据浏览功能外，TOra额外还为数据库管理员和开发者提供了一些有用的工具，比如 PL/SQL 调试工具，SQL语法高亮，表格字段自动补全等。</p>
+<h5>截图</h5>
+<p><a href="http://i.imgur.com/YJj6E25.png"><img class="alignnone size-medium wp-image-841" title="main-window" src="http://i.imgur.com/YJj6E25.png" alt="" width="300" height="174" /></a></p>
+<h5>特性</h5>
+<ul>
+<li>
+<div>能同时连接多个数据库。</div>
+</li>
+<li>
+<div>异步数据库通信。访问数据库时GUI界面反应非常快速。</div>
+</li>
+<li>
+<div>无需在数据库服务器端安装任何工具即可拥有全部功能。</div>
+</li>
+<li>
+<div>高级<acronym title="Structured Query Language">SQL</acronym>工作表。</div>
+<ul>
+<li>
+<div>代码自动补全。</div>
+</li>
+<li>
+<div>对执行计划提供支持。</div>
+</li>
+<li>
+<div>执行统计。</div>
+</li>
+<li>
+<div><acronym title="Structured Query Language">SQL</acronym> 语法高亮。</div>
+</li>
+<li>
+<div>常用的<acronym title="Structured Query Language">SQL</acronym>语句的快速菜单。</div>
+</li>
+<li>
+<div>在状态栏提示解析错误。</div>
+</li>
+<li>
+<div>用图表对查询结果进行可视化展示。</div>
+</li>
+<li>
+<div>PL/<acronym title="Structured Query Language">SQL</acronym> 块解析。</div>
+</li>
+<li>
+<div>模式浏览器。</div>
+</li>
+<li>
+<div>对 表 &amp; 视图 提供编辑功能。</div>
+</li>
+<li>
+<div>引用 &amp; 依赖。</div>
+</li>
+<li>
+<div>基于页签 &amp; 树的浏览模式。</div>
+</li>
+<li>
+<div>对象 &amp; 数据过滤。</div>
+</li>
+<li>
+<div>PL/<acronym title="Structured Query Language">SQL</acronym> 编辑器 &amp; 调试器。</div>
+</li>
+<li>
+<div>断点。</div>
+</li>
+<li>
+<div>变量查看。</div>
+</li>
+<li>
+<div>单步调试。</div>
+</li>
+<li>
+<div>查看调试器 <acronym title="Structured Query Language">SQL</acronym> 输出。</div>
+</li>
+<li>
+<div>语法结构树解析。</div>
+</li>
+</ul>
+</li>
+<li>
+<div>服务器调优。</div>
+<ul>
+<li>
+<div>服务器概览。</div>
+</li>
+<li>
+<div>charts 调优。</div>
+</li>
+<li>
+<div>对表空间 &amp; 文件进行I/O监控。</div>
+tora: error while loading shared libraries: libclntsh.so.11.1: cannot open shared object file: No such file or directory</li>
+<li>
+<div>性能指示器。</div>
+</li>
+<li>
+<div>原始服务器统计。</div>
+</li>
+</ul>
+</li>
+<li>
+<div>参数编辑器 (P-file 编辑器).</div>
+</li>
+<li>
+<div>安全管理器。</div>
+</li>
+<li>
+<div>存储管理器，可以查看 object &amp; extent。</div>
+</li>
+<li>
+<div>会话管理器。</div>
+</li>
+<li>
+<div>回滚管理器，支持检测太老旧的快照。</div>
+</li>
+<li>
+<div>SGA &amp; 长操作跟踪。</div>
+</li>
+<li>
+<div>当前会话信息。</div>
+</li>
+<li>
+<div>统计管理器，支持并行分析。</div>
+</li>
+<li>
+<div>DBMS 警告工具。</div>
+</li>
+<li>
+<div>失效对象查看器。</div>
+</li>
+<li>
+<div><acronym title="Structured Query Language">SQL</acronym>输出查看器。</div>
+</li>
+<li>
+<div>数据库 &amp; 模式比较和管理。</div>
+</li>
+<li>
+<div>抽取模式下的对象为 <acronym title="Structured Query Language">SQL</acronym> 脚本。</div>
+</li>
+<li>
+<div>易于扩展。</div>
+</li>
+</ul>
+<h5>安装　TOra</h5>
+<p>在openSUSE安装TOra，是一件非常简单的事情。<a href="http://torasql.com/Download">TOra官方下载页面</a>提供了<a href="http://download.yarpen.cz/">openSUSE的软件安装源列表</a>，你只需添加适合自己操作系统的软件源即可。以openSUSE12.2为例，执行下述命令添加软件源：</p>
+<pre class="brush: bash">sudo zypper ar -r http://pmbs-api.links2linux.org:8080/Oracle/openSUSE_12.2/Oracle.repo
+</pre>
+<p>然后执行下述命令即可完成TOra的安装：</p>
+<pre class="brush: bash">sudo zypper in tora</pre>
+<h5>安装　Oracle Instant Client</h5>
+<p>TOra首要支持的数据库就是Oracle，要运行 TOra 也是要求必须事先安装 Oracle Instant Client 的。如果不安装 Oracle Instant Client 就想启动 TOra，则会报类似下述错误：</p>
+<pre class="brush: plain">tora: error while loading shared libraries: libclntsh.so.11.1: cannot open shared object file: No such file or directory</pre>
+<p>要解决该问题，需要执行下述步骤：</p>
+<ol>
+<li>下载 Oracle Instant Client。下载地址在<a href="http://www.oracle.com/technetwork/topics/linuxsoft-082809.html">这里</a>。记得先选择 Accept License Agreement，下载需要 Oracle 帐户，注册一个就是了，免费的。</li>
+<li>安装 Oracle Instant Client。执行命令:
+<pre class="brush: bash">apper /mnt/F/Software/linux/oracle-instantclient11.2-basic-11.2.0.3.0-1.i386.rpm</pre>
+</li>
+<li>修改 <em>LD_LIBRARY_PATH</em>环境变量。该环境变量主要用于指定查找共享库（ 动态链接库）时除了默认路径之外的其他路径。TOra会从这些路径查找 Oracle Instant Client 的相关类库。执行下述命令即可完成修改：
+<pre class="brush: bash">vi ~/.bashrc
+export LD_LIBRARY_PATH='/usr/lib/oracle/11.2/client/lib/:'$LD_LIBRARY_PATH
+source ~/.bashrc  
+  </pre>
+</li>
+</ol>
+<h5>添加 Mysql、PostgreSQL支持</h5>
+<p>安装完成 Oracle Instant Client 之后，直接在当前会话运行命令 tora 就可以启动 TOra 并访问 Oracle数据库了。如果你还希望TOra也能访问Mysql和PostgreSQL，还需要执行下述命令安装相关RPM包：</p>
+<pre class="brush: bash">sudo zypper in libqt4-sql-postgresql
+sudo zypper in libqt4-sql-mysql
+</pre>
+<h5>运行 TOra</h5>
+<p>由于安装过程中修改了环境变量 （ <span class="lang:default decode:true  crayon-inline ">source ~/.bashrc</span> ），但是只在执行 source 命令的 终端当前会话有效，所以，要运行TOra，要么在当前会话运行命令 tora，要么注销当前GUI会话并重新登录之后点击开始菜单中的启动项。</p>
