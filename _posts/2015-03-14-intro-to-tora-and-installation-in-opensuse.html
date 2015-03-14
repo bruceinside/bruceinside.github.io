@@ -180,11 +180,11 @@ apper /mnt/F/Software/linux/oracle-instantclient11.2-basic-11.2.0.3.0-1.i386.rpm
 </li>
 <li>修改 <em>LD_LIBRARY_PATH</em>环境变量。该环境变量主要用于指定查找共享库（ 动态链接库）时除了默认路径之外的其他路径。TOra会从这些路径查找 Oracle Instant Client 的相关类库。执行下述命令即可完成修改：
 
-{% highlight text linenos %}
+<pre>
 vi ~/.bashrc
 export LD_LIBRARY_PATH='/usr/lib/oracle/11.2/client/lib/:'$LD_LIBRARY_PATH
 source ~/.bashrc
-{% endhighlight %}
+</pre>
 
 </li>
 </ol>
