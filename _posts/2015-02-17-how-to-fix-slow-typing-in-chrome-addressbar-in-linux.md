@@ -10,7 +10,7 @@ tags: [Google Chrome,linux,Address Bar, Omnibox]
 
 ##### 遇到了什么问题？
 
-当我在 openSUSE 系统中使用 Google Chrome ( V41 ) 浏览器时，会发现有这么几个性能问题存在：
+当我在 openSUSE 系统中使用 Google Chrome ( 41 ～ 44 版本 ) 浏览器时，会发现有这么几个性能问题存在：
 
 0. 在地址栏输入内容时，发现输入非常卡顿，完全赶不上我敲击键盘按键的速度，有时还会出现输入的字符乱序的情况。当把光标放在地址栏URL的末尾，然后按 Backspace 键进行删除时，也非常的缓慢。
 0. 切换浏览页签也能感觉到明显的延迟。
