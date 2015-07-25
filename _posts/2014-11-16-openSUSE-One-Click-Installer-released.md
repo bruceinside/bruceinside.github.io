@@ -67,7 +67,7 @@ tags: [openSUSE, openSUSE-One-Click-Installer]
 wget -nd -c -P ~ --no-check-certificate --no-cookies "https://raw.githubusercontent.com/redhatlinux10/openSUSE-One-Click-Installer/master/openSUSE-One-Click-Installer.sh" && sh ~/openSUSE-One-Click-Installer.sh
 {% endhighlight %}
 
-如果你希望取消某些软件包的安装，可以通过定制 ooci.conf 文件来实现，你可以先运行下该脚本，在询问是否继续的时候选择否，ooci.conf 文件就自动创建好了，该配置文件和 openSUSE-One-Click-Installer.sh 同目录，都在你的用户家目录下。
+默认情况下 `openSUSE-One-Click-Installer.sh` 会执行上述提到的所有动作 / 安装所有软件包，如果你希望不要安装其中的某些软件包，可以通过定制 `ooci.conf` 文件来实现，因为本脚本执行的时候会从中读取配置项来决定是否要执行某个动作。首先你先运行下该脚本，在询问是否继续的时候选择`否`来取消本次执行，但是在这个时候该脚本其实已经把 `ooci.conf` 文件下载下来了，该配置文件和 `openSUSE-One-Click-Installer.sh` 同目录，都在你的用户家目录下。你可以修改 `ooci.conf` 文件的配置项来定制安装哪些软件包（不用怕，里面有详细的注释），然后再次运行 `openSUSE-One-Click-Installer.sh` 就可以了。
 
 ##### 汇报 bug 地址
 
