@@ -1,0 +1,38 @@
+---
+layout: post
+title: 使用ubuntu ppa安装 Wireshark 1.6.1
+description: "Wireshark 是世界上最好的网络协议分析器。你可以用来捕捉、浏览电脑上的网络流量。在多个行业之间以及教育机构中，它是事实上的标准（通常还是规范上的标准）。"
+modified: 2011-08-01 20:40:00 +0800
+tags: [ubuntu,ppa,wireshark]
+---
+
+<p>Wireshark 是世界上最好的网络协议分析器。你可以用来捕捉、浏览电脑上的网络流量。在多个行业之间以及教育机构中，它是事实上的标准（通常还是规范上的标准）。</p>
+<h4>特性</h4>
+<p>Wireshark 特性非常丰富，主要包括：</p>
+<ul>
+<li>支持数百种协议的深度检测，并且不断有新的协议被加入。</li>
+<li>实时捕捉，离线分析。</li>
+<li>标准的三面板数据包查看器。</li>
+<li>多平台支持，包括 Windows, Linux, OS X, Solaris, FreeBSD, NetBSD 等等。</li>
+<li>捕捉的网络数据既可以用图形界面工具察看，也可以用终端模式下的 TShark 察看。</li>
+<li>业界最强大的显示过滤器。</li>
+<li>丰富的 VoIP 分析。</li>
+<li>支持读写许多种不同的捕捉文件格式：tcpdump (libpcap), Pcap NG, Catapult DCT2000, Cisco Secure IDS iplog, Microsoft Network Monitor, Network General Sniffer&reg; (compressed and uncompressed), Sniffer&reg; Pro, and NetXray&reg;, Network Instruments Observer, NetScreen snoop, Novell LANalyzer, RADCOM WAN/LAN Analyzer, Shomiti/Finisar Surveyor, Tektronix K12xx, Visual Networks Visual UpTime, WildPackets EtherPeek/TokenPeek/AiroPeek 等等。</li>
+<li>可以直接查看用 gzip 压缩过的捕捉文件。</li>
+<li>可以从 Ethernet, IEEE 802.11, PPP/HDLC, ATM, Bluetooth, USB, Token Ring, Frame Relay, FDDI 等(取决于你的平台) 设备中读取实时数据。</li>
+<li>支持多种协议解码，包括 IPsec, ISAKMP, Kerberos, SNMPv3, SSL/TLS, WEP, and WPA/WPA2。</li>
+<li>数据包列表可以应用不同的颜色方案，从而进行快速、直观的分析。</li>
+<li>捕捉输出可以导出为 XML,PostScript&reg;, CSV, 或者纯文本文件。</li>
+</ul>
+<h4>使用 ubuntu ppa 安装 Wireshark 1.6.1</h4>
+<p>打开终端，运行下述命令：</p>
+<pre class="brush: bash">sudo add-apt-repository ppa:n-muench/programs-ppa
+sudo apt-get update
+sudo apt-get install wireshark
+</pre>
+<p>原文链接：<a href="http://www.ubuntugeek.com/how-to-install-wireshark-1-6-1-using-ubuntu-ppa.html">http://www.ubuntugeek.com/how-to-install-wireshark-1-6-1-using-ubuntu-ppa.html</a></p>
+<p><a href="http://www.ubuntugeek.com/how-to-install-wireshark-1-6-1-using-ubuntu-ppa.html"></a>译者添加： 上述安装方法只适合于 Oneiric, Natty, Maverick。 要在 Lucid 上安装 Wireshark 1.6.1，请执行下述命令：</p>
+<pre class="brush: bash">sudo add-apt-repository ppa:n-muench/programs-ppa2
+sudo apt-get update
+sudo apt-get install wireshark
+</pre>
